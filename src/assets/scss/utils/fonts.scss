@@ -1,0 +1,34 @@
+/*-------------- fonts -----------------*/
+/* Product Sans */
+@font-face {
+	font-family: 'Product Sans';
+	src:url('#{$path-fonts}/ProductSans/ProductSans-Regular.eot');
+	src: local('Product Sans'), local('ProductSans-Regular'),
+		url('#{$path-fonts}/ProductSans/ProductSans-Regular.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/ProductSans/ProductSans-Regular.woff') format('woff'),
+		url('#{$path-fonts}/ProductSans/ProductSans-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Product Sans';
+	src:url('#{$path-fonts}/ProductSans/ProductSans-Medium.eot');
+	src: local('Product Sans'), local('ProductSans-Medium'),
+		url('#{$path-fonts}/ProductSans/ProductSans-Medium.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/ProductSans/ProductSans-Medium.woff') format('woff'),
+		url('#{$path-fonts}/ProductSans/ProductSans-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Product Sans';
+	src:url('#{$path-fonts}/ProductSans/ProductSans-Black.eot');
+	src: local('Product Sans'), local('ProductSans-Black'),
+		url('#{$path-fonts}/ProductSans/ProductSans-Black.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/ProductSans/ProductSans-Black.woff') format('woff'),
+		url('#{$path-fonts}/ProductSans/ProductSans-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}

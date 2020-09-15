@@ -1,0 +1,34 @@
+@mixin font($font-style, $font-weight, $font-size, $line-height, $font-color) {
+	font-style: $font-style;
+	font-weight: $font-weight;
+	font-size: $font-size;
+	line-height: $line-height;
+	color: $font-color;
+}
+
+@mixin top-center {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin reset-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+@mixin gradient-green{
+	background: linear-gradient(180deg, #47B26B 0%, #A2CC33 100%);
+}
+
+@mixin gradient-green-dark{
+	background: linear-gradient(180deg, #47B26B 0%, #A2CC33 100%);
+}
+
+@mixin gradient-orange{
+	background: linear-gradient(72.37deg, #F28F16 6.41%, #D60B52 95.11%);
+}
+
+@mixin gradient-orange-dark{
+	background: linear-gradient(72.37deg, #e08516 6.41%, #b50b46 95.11%);
+}
