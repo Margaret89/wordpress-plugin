@@ -2,20 +2,11 @@ extends ../layout/main
 
 block variables
 	- var title = 'Typography';
-	- var h1 = 'Typography';
-
-
-block breadcrumb
-	-
-		var breadcrumbs=[
-			{href:'/',name:'Главная'},
-			{href:'#',name:'Типографика'},
-		];
-
-	+breadcrumbs(breadcrumbs)
 
 block content
-	section
+	section.container
+		h1 Typography
+
 		p
 			a(href='#') Link
 		p
@@ -78,17 +69,17 @@ block content
 		a(href="#").btn.btn_border-grad
 			span.btn__grad-content Button
 
-		br
-		br
-		a(href="#").btn.btn_border-grad
-			span.btn__grad-content
-				+svg('ic-alarm','ic-alarm', '15', '15')
-				span Button
+		//- br
+		//- br
+		//- a(href="#").btn.btn_border-grad
+		//- 	span.btn__grad-content
+		//- 		//- +svg('ic-alarm','ic-alarm', '15', '15')
+		//- 		span Button
 
 		br
 		br
 		a.btn.btn_small.btn_orange(href='#')
-			+svg('ic-crown','ic-crown ic-white', '16', '16')
+			//- +svg('ic-crown','ic-crown ic-white', '16', '16')
 			span Button
 		//- br
 		//- br
@@ -104,8 +95,22 @@ block content
 		br
 		br
 		div.h2 Icons
-		.type-icon
-			.type-icon__item
-				.type-icon__img
-					+svg('ic-twitter','ic-twitter', '17', '14')
-				.type-icon__name ic-twitter
+
+		div(style="background: #f28f16; padding: 10px;")
+			.type-icon.type-icon_white
+				.type-icon__item
+					.type-icon__img
+						+svg('ic-arrow-left','ic-arrow-left ic-white', '16', '12')
+					.type-icon__name ic-arrow-left
+
+				.type-icon__item
+					.type-icon__img
+						+svg('ic-arrow-right','ic-arrow-right ic-white', '16', '12')
+					.type-icon__name ic-arrow-right
+
+				
+		//- .type-icon
+		//- 	.type-icon__item
+		//- 		.type-icon__img
+		//- 			+svg('ic-arrow-right','ic-arrow-right ic-white', '16', '12')
+		//- 		.type-icon__name ic-twitter

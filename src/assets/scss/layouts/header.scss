@@ -1,0 +1,33 @@
+/*-------------- header -----------------*/
+.header{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 400px;
+	color: #fff;
+	position: relative;
+
+	.icon{fill: #fff;}
+
+	h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{color: #fff;}
+
+	&__back{
+		@include font(normal, 500, 0.875rem, 1.2, #fff);
+		text-decoration: underline;
+
+		.icon{margin-right: 8px;}
+	}
+
+	&__back:hover{
+		text-decoration: none;
+	}
+}
+
+html[dir="rtl"]{
+	.header{
+		&__back .icon{
+			margin-right: 0;
+			margin-left: 8px;
+		}
+	}
+}

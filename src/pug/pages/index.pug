@@ -4,19 +4,16 @@ block variables
 	- var title = 'Content';
 	- 
 		var pagelist = [
-			{href: 'main.html',name:'Main'},
+			{href: 'menu.html',name:'Menu'},
 			{href: 'tipografika.html',name:'Tipografika'},
 		];
 
 block content
-	section
-		.container
-			.row
-				.col-12
-					h1 Content
-					ul
-						each page in pagelist
-							li
-								a(href=page.href,)= page.name
+	section.container
+		h1 Content
+		ul
+			each page in pagelist
+				li
+					a(href=page.href,)= page.name
 
 

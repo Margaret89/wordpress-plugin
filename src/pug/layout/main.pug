@@ -10,11 +10,7 @@ html(lang='ru')
 
 	body
 		.wrapper
-			include ./header
+			if header_info
+				+header(header_info)
 			main
-				block header-ban
-				block breadcrumb
-				if h1
-					+h1(h1)
 				block content
-			include ./footer
