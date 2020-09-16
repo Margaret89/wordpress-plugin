@@ -1,0 +1,71 @@
+/*-------------- input-check -----------------*/
+.input-check{
+	&__label{
+		display: inline-flex;
+		align-items: center;
+		cursor: pointer;
+		position: relative;
+	}
+
+	input[type=checkbox] {
+		display: none;
+	}
+
+	&__mark{
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		border: 1px solid #858585;
+		border-radius: 2px;
+		position: relative;
+		margin-top: -3px;
+
+		.icon{
+			display: none;
+			fill: $color-red;
+		}
+	}
+
+	&__text{
+		max-width: calc(100% - 32px);
+		@include font(normal, normal, 1rem, 1.2, #858585);
+		margin-left: 12px;
+	}
+
+	input[type=checkbox]:checked + &__label &__mark{border-color: $color-red;}
+	input[type=checkbox]:checked + &__label &__text{color: $color-red;}
+
+	input[type=checkbox]:checked + &__label &__mark .icon{
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		@include top-center;
+	}
+}
+
+html[dir="rtl"]{
+	.input-check{
+		&__text{
+			margin-left: 0;
+			margin-right: 12px;
+		}
+	}
+}
+
+// @media (max-width: 767px) {
+// 	.input-check{
+// 		&_big &__mark{
+// 			width: 20px;
+// 			height: 20px;
+// 		}
+
+// 		&_big input[type=checkbox]:checked + &__label &__mark:after{
+// 			width: 12px;
+// 			height: 12px;
+// 		}
+
+// 		&_circle &__text{font-size: 0.875rem;}
+// 	}
+// }

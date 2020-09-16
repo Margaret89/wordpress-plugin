@@ -1,0 +1,171 @@
+/*-------------- filter-----------------*/
+.filter{
+	position: relative;
+
+	&__btn{
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		background: #e34836;
+		transition: all 0.2s ease 0s;
+		cursor: pointer;
+
+		.icon{
+			fill: #fff;
+			vertical-align: top;
+		}
+
+		.ic-cancel{display: none;}
+	}
+
+	&__btn:hover{background: #c93f30;}
+
+	&__popup{
+		display: none;
+		width: 530px;
+		background: #fff;
+		border-radius: 6px 0px 6px 6px;
+		box-shadow: 0px 12px 24px rgba(185, 185, 185, 0.25);
+		padding: 20px 24px;
+		margin-top: 8px;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		z-index: 2;
+	}
+
+	.cat-filter{
+		padding-bottom: 8px;
+		border-bottom: 1px solid #e1e1e1;
+		margin-bottom: 16px;
+	}
+
+	&__list{
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+
+	&__item{
+		width: calc(50% - 20px);
+		margin: 0 10px 8px;
+	}
+
+	&__label{
+		@include font(normal, 500, 1rem, 1.2, $color-red);
+		margin-bottom: 16px;
+	}
+
+	&__bottom{
+		display: flex;
+		justify-content: space-between;
+		border-top: 1px solid #ebebeb;
+		margin-top: 4px;
+		padding-top: 16px;
+	}
+
+	&__clear{
+		@include font(normal, normal, 0.875rem, 1.2, $color-red);
+		text-transform: uppercase;
+	}
+
+	&__cancel{
+		@include font(normal, 500, 0.875rem, 1.2, #858585);
+		text-transform: uppercase;
+		margin-right: 20px;
+	}
+
+	&__apply{
+		@include font(normal, 500, 0.875rem, 1.2, $color-orange);
+		text-transform: uppercase;
+	}
+
+	&__clear:hover{color: $color-red-dark;}
+	&__cancel:hover{color:  $color-text;}
+	&__apply:hover{color:  $color-orange-dark;}
+
+	&.active &__popup{display: block;}
+	&.active &__btn{
+		.ic-filter{display: none;}
+		.ic-cancel{display: inline-block;}
+	}
+}
+
+.cat-filter{
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		height: 40px;
+		min-width: 68px;
+		border-radius: 20px;
+		padding: 0 14px;
+		background: #faf9f9;
+		margin: 0 16px 12px 0;
+		white-space: nowrap;
+		font-size: 0;
+		text-decoration: none;
+		text-align: center;
+		transition: all 0.3s ease 0s;
+		cursor: pointer;
+	}
+
+	&__icon,
+	&__text{
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&__icon{
+		margin-right: 8px;
+		margin-top: -2px;
+	}
+
+	&__text{
+		@include font(normal, normal, 1rem, 40px, $color-grey);
+	}
+
+	&__item:hover,
+	&__item.active{
+		background: $color-orange;
+	}
+
+	&__item:hover &__text,
+	&__item.active &__text{
+		color: #fff;
+	}
+}
+
+html[dir="rtl"]{
+	.filter{
+		&__popup{
+			right: auto;
+			left: 0;
+			border-radius: 0 6px 6px 6px;
+		}
+
+		// &__cancel{
+		// 	margin-right: 0;
+		// 	margin-left: 20px;
+		// }
+	}
+
+	.cat-filter{
+		&__item{
+			margin-right: 0;
+			margin-left: 16px;
+		}
+
+		&__icon{
+			margin-right: 0;
+			margin-left: 8px;
+		}
+	}
+}

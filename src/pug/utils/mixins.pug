@@ -11,7 +11,7 @@ mixin svg(icon, name_class, width,height)
 mixin header(info)
 	header.header(style="background-image: url(/assets/img/menus.jpg)")
 		.container
-			a.header__back
+			a.header__back(href="#")
 				+svg('ic-arrow-left','ic-arrow-left ic-white', '16', '12')
 				| Back
 				
