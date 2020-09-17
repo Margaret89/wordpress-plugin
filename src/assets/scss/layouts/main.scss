@@ -190,6 +190,20 @@ button.btn_orange:hover{
 	background: $color-orange-dark;
 }
 
+.btn_opacity,
+input[type="submit"].btn_opacity,
+button.btn_opacity{
+	background: rgba(255, 255, 255, 0.5);
+	color: $color-red;
+	box-shadow: none;
+}
+
+.btn_opacity:hover,
+input[type="submit"].btn_opacity:hover,
+button.btn_opacity:hover{
+	background: #fff;
+}
+
 .btn_border,
 input[type="submit"].btn_border,
 button.btn_border{

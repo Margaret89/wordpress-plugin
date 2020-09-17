@@ -90,7 +90,10 @@ block content
 		br
 		br
 		div(style='padding: 20px; background: #d60b52; border-radius: 12px;')
-			a.btn.btn_border-white(href='#') Change
+			a.btn.btn_border-white(href='#') Button
+			br
+			br
+			a.btn.btn_opacity(href='#') Button
 
 		br
 		br
@@ -102,6 +105,45 @@ block content
 					+svg('ic-check','ic-check', '16', '12')
 
 				span.input-check__text label
+		br
+		br
+		.h2 Mark
+		.mark
+			.mark__text 3,7
+
+		br
+		br
+		.h2 Progress
+		-
+			var info={
+				title:'Title',
+				num:'4,6',
+				percent:'92'
+			}
+		+progress(info)
+
+		br
+		br
+		-
+			var info={
+				title:'Title',
+				num:'3',
+				percent:'60',
+				color:'orange'
+			}
+		+progress(info)
+
+		br
+		br
+		-
+			var info={
+				title:'Title',
+				num:'1,5',
+				percent:'25',
+				color:'red'
+			}
+		+progress(info)
+		
 		
 		br
 		br
@@ -138,5 +180,96 @@ block content
 
 			.type-icon__item
 				.type-icon__img
+					+svg('ic-arrow-down','ic-arrow-down', '12', '8')
+				.type-icon__name ic-arrow-down
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-arrow-up','ic-arrow-up', '12', '8')
+				.type-icon__name ic-arrow-up
+
+			.type-icon__item
+				.type-icon__img
 					+svg('ic-burger','ic-burger', '20', '20')
 				.type-icon__name ic-burger
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-clock','ic-clock', '20', '20')
+				.type-icon__name ic-clock
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-direction','ic-direction', '20', '20')
+				.type-icon__name ic-direction
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-table','ic-table', '20', '20')
+				.type-icon__name ic-table
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-gift','ic-gift', '20', '20')
+				.type-icon__name ic-gift
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-accessibility','ic-accessibility', '25', '24')
+				.type-icon__name ic-accessibility
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-accessibility-wc','ic-accessibility-wc', '25', '24')
+				.type-icon__name ic-accessibility-wc
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-deaf','ic-deaf', '25', '24')
+				.type-icon__name ic-deaf
+
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-park','ic-park', '25', '24')
+				.type-icon__name ic-park
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-euro','ic-euro', '40', '40')
+				.type-icon__name ic-euro
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-address','ic-address', '12', '16')
+				.type-icon__name ic-address
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-phone','ic-phone', '16', '16')
+				.type-icon__name ic-phone
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-instagram','ic-instagram', '16', '16')
+				.type-icon__name ic-instagram
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-facebook','ic-facebook', '16', '16')
+				.type-icon__name ic-facebook
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-tripadvisor','ic-tripadvisor', '16', '16')
+				.type-icon__name ic-tripadvisor
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-like','ic-like', '20', '20')
+				.type-icon__name ic-like
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-like-fill','ic-like-fill', '20', '20')
+				.type-icon__name ic-like-fill

@@ -16,3 +16,13 @@ mixin header(info)
 				| Back
 				
 			h1= info.title
+
+
+mixin progress(info)
+	.progress(class=info.color=='orange'?'progress_orange':info.color=='red'?'progress_red':'')
+		.progress__info
+			.progress__title= info.title
+			.progress__mark= info.num
+
+		.progress__field
+			.progress__line(style="width: "+info.percent+"%")
