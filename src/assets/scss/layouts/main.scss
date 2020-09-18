@@ -207,7 +207,6 @@ button.btn_opacity:hover{
 .btn_border,
 input[type="submit"].btn_border,
 button.btn_border{
-	text-transform: none;
 	border: 2px solid $color-red;
 	background: transparent;
 	color: $color-red;

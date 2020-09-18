@@ -1,8 +1,24 @@
-<svg width="1028" height="150" viewBox="0 0 1028 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1028" height="150">
-<rect width="1028" height="150" rx="12" fill="white"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1028 76.3" style="enable-background:new 0 0 1028 76.3;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;filter:url(#Adobe_OpacityMaskFilter);}
+	.st1{mask:url(#mask0_1_);}
+	.st2{opacity:0.7;fill:#EDEFF4;enable-background:new    ;}
+</style>
+<defs>
+	<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="-39.6" y="0" width="1111.6" height="163.5">
+		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+	</filter>
+</defs>
+<mask maskUnits="userSpaceOnUse" x="-39.6" y="0" width="1111.6" height="163.5" id="mask0_1_">
+	<path class="st0" d="M12-73.7h1004c6.6,0,12,5.4,12,12v126c0,6.6-5.4,12-12,12H12c-6.6,0-12-5.4-12-12v-126
+		C0-68.4,5.4-73.7,12-73.7z"/>
 </mask>
-<g mask="url(#mask0)">
-<path opacity="0.7" d="M1041.14 156.561C1041.14 156.561 1105.48 122.882 1048.22 103.137C994.643 84.6632 964.319 55.2053 922.875 89.6561C899.906 108.75 810.169 117.117 784.898 117.117C719.701 117.117 731.771 83.6681 599.329 83.6681C515.416 83.6681 306.803 115.167 199.131 119.613C91.4585 124.06 -6.06499 60.6975 -38.9168 161.553C-59.7337 225.462 396.258 226.307 453.648 231.659C518.41 237.698 879.419 248.239 964.319 202.994C983.056 193.01 1030.1 174.273 1041.14 156.561Z" fill="#EDEFF4"/>
+<g class="st1">
+	<path class="st2" d="M1041.1,82.8c0,0,64.3-33.7,7.1-53.4c-53.6-18.5-83.9-47.9-125.3-13.5c-23,19.1-112.7,27.5-138,27.5
+		c-65.2,0-53.1-33.4-185.6-33.4c-83.9,0-292.5,31.5-400.2,35.9C91.5,50.3-6.1-13-38.9,87.8c-20.8,63.9,435.2,64.8,492.6,70.1
+		c64.8,6,425.8,16.6,510.7-28.7C983.1,119.3,1030.1,100.5,1041.1,82.8z"/>
 </g>
 </svg>

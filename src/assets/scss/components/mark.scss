@@ -8,8 +8,9 @@
 	position: relative;
 	border-radius: 50%;
 	background-color: #fff;
-	background-image: linear-gradient(176deg, transparent 50%, $color-orange 50%),
-					linear-gradient(90deg, #fff 50%, $color-orange 50%);
+	background-image: linear-gradient(226deg, transparent 50%, $color-green 50%),
+					linear-gradient(90deg, #fff 50%, $color-green 50%);
+	transition: all 0.3s ease;
 
 	&::after{
 		content: '';
@@ -17,7 +18,7 @@
 		height: calc(100% - 6px);
 		width: calc(100% - 6px);
 		border-radius: 50%;
-		background: #ffe6c8;
+		background:  #deffe9;
 		position: absolute;
 		@include top-center;
 		left: 0;
@@ -26,8 +27,24 @@
 	}
 
 	&__text{
-		@include font(normal, 500, 1.375rem, 1, $color-orange);
+		@include font(normal, 500, 1.375rem, 1, $color-green);
 		position: relative;
 		z-index: 1;
 	}
+
+	&_orange{
+		background-image: linear-gradient(176deg, transparent 50%, $color-orange 50%),
+					linear-gradient(90deg, #fff 50%, $color-orange 50%);
+	}
+
+	&_orange &__text{color: $color-orange;}
+	&_orange::after{background: #ffe6c8;}
+
+	&_red{
+		background-image: linear-gradient(54deg, #fff 50%, transparent 50%),
+					linear-gradient(90deg, #fff 50%, $color-red 50%);
+	}
+
+	&_red &__text{color: $color-red;}
+	&_red::after{background: #ffe1ec;}
 }
