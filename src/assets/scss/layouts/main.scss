@@ -118,7 +118,7 @@ input[type="submit"].btn,
 button.btn{
 	display: inline-block;
 	height: 3rem;
-	min-width: 200px;
+	min-width: 172px;
 	@include gradient-orange;
 	border: 0;
 	border-radius: 1.5rem;
@@ -174,6 +174,19 @@ button.btn_small{
 	line-height: 1.5rem;
 	padding: 0 10px;
 	text-transform: none;
+}
+
+.btn_grad-green,
+input[type="submit"].btn_grad-green,
+button.btn_grad-green{
+	background: linear-gradient(85.55deg, #47B26B 14.77%, #A2CC33 98.72%);
+	color: #fff;
+}
+
+.btn_grad-green:hover,
+input[type="submit"].btn_grad-green:hover,
+button.btn_grad-green:hover{
+	background: linear-gradient(85.55deg, #3c965a 14.77%, #90b42c 98.72%);
 }
 
 .btn_orange,

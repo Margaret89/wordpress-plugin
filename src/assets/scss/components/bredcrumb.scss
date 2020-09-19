@@ -1,0 +1,17 @@
+/*-------------- bredcrumb -----------------*/
+.bredcrumb{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 24px -8px;
+
+	&__item{margin: 10px 8px;}
+
+	&__item,
+	&__item a{
+		@include font(normal, normal, 0.875rem, 1.2, #fff);
+		transition: all 0.2s ease;
+	}
+
+	&__item a:hover{color: $color-orange;}
+}

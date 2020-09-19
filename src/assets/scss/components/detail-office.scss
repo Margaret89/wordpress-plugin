@@ -79,7 +79,10 @@
 		align-items: center;
 		margin: 0 10px;
 		text-decoration: none;
+		position: relative;
 	}
+
+	&__item:hover .service-popup{display: block;}
 
 	&__icon{
 		min-width: 20px;
@@ -95,6 +98,99 @@
 }
 
 a.service-info__item:hover .service-info__text{color: $color-red;}
+
+.service-popup{
+	display: none;
+	padding-left: 15px;
+	padding-top: 7px;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	transition: all 0.3s ease;
+
+	&__content{
+		background: #fff;
+		border-radius: 0px 12px 12px 12px;
+		padding: 16px;
+		box-shadow: 0px 12px 20px rgba(171, 171, 171, 0.25);
+	
+	}
+	&.active{display: block;}
+	&.active .service-time{margin-bottom: 48px;}
+}
+
+.service-time{
+	display: flex;
+	position: relative;
+	margin-left: -5px;
+	margin-right: -5px;
+
+	&:hover{margin-bottom: 48px;}
+
+	&__item{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		background: #f3f3f3;
+		@include font(normal, 500, 0.875rem, 1.2, $color-grey);
+		margin: 0 5px;
+		transition: background, color 0.2s ease;
+		position: relative;
+	}
+
+	&__item::after{
+		content: '';
+		display: none;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 10px 8px;
+		border-color: transparent transparent $color-red transparent;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		margin: 4px auto 0;
+	}
+
+	&__item:hover,
+	&__item.active{
+		background: $color-red;
+		color: #fff;
+	}
+
+	&__item:hover::after,
+	&__item.active::after{
+		display: inline-block;
+	}
+
+	&__popup{
+		display: none;
+		width: 100%;
+		padding-top: 11px;
+		position: absolute;
+		left: 0;
+		top: 100%;
+	}
+
+	&__item:hover + &__popup,
+	&__item.active + &__popup{
+		display: block;
+	}
+
+	&__val{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 40px;
+		border-radius: 12px;
+		background: $color-red;
+		@include font(normal, 500, 1rem, 1, #fff);
+	}
+}
 
 .rating-card{
 	background: #fff;
@@ -371,6 +467,15 @@ html[dir="rtl"]{
 			margin-right: 0;
 			margin-left: 10px;
 		}
+	}
+
+	.service-popup{
+		padding-left: 0;
+		padding-right: 15px;
+		left: auto;
+		right: 0;
+
+		&__content{border-radius: 12px 0px 12px 12px;}
 	}
 
 	.rating-card{

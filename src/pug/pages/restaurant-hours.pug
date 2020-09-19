@@ -6,10 +6,6 @@ block variables
 block content
 	.detail-office-wrap
 		section.gallery
-			a.gallery__back(href="#")
-				+svg('ic-arrow-left','ic-arrow-left ic-white', '16', '12')
-				| Back
-
 			.gallery-list
 				.gallery-list__item.gallery-list__item_big
 					img(src="/assets/img/gallery1.jpg", alt="")
@@ -29,6 +25,105 @@ block content
 
 			.gallery__more
 				a.btn.btn_opacity All photos (12)
+
+			.top-panel-wrap
+				.container
+					.top-panel
+						.top-panel__info
+							.top-panel__logo
+								img(src="/assets/img/geteat.svg", alt="")
+
+							.top-panel-menu
+								a(href="#").top-panel-menu__item Deals & Coupons
+								a(href="#").top-panel-menu__item Restaurants
+
+						.top-panel__action
+							.edit-address
+								.edit-address__val
+									+svg('ic-address','ic-address', '12', '16')
+									| Fishman 19, Tel Aviv
+
+								.edit-address__btn
+									+svg('ic-edit','ic-edit', '16', '16')
+
+							.filter
+								.filter__btn
+									+svg('ic-filter','ic-filter', '22', '22')
+									+svg('ic-cancel','ic-cancel', '16', '16')
+
+								.filter__popup
+									-
+										var list=[
+											{img:'avocado.svg', title:'Vegan'},
+											{img:'gluten.svg', title:'More'},
+											{img:'broccoli.svg', title:'Vegeterian'},
+											{img:'avocado.svg', title:'Vegan'},
+											{img:'broccoli.svg', title:'Vegeterian'},
+											{img:'avocado.svg', title:'Vegan'},
+											{img:'gluten.svg', title:'More'},
+											{img:'avocado.svg', title:'Vegan'},
+											{img:'gluten.svg', title:'Ipsum'},
+											{img:'broccoli.svg', title:'Vegeterian'},
+											{img:'avocado.svg', title:'Lorem'},
+										]
+
+									.cat-filter
+										each item in list
+											.cat-filter__item
+												.cat-filter__icon
+													img(src="/assets/img/"+item.img, alt="")
+												.cat-filter__text= item.title
+
+
+
+									.filter__label Filters
+
+									.filter__list
+										-
+											var filters=[
+												{title:'Popular'},
+												{title:'Takeaway'},
+												{title:'Nearby'},
+												{title:'Future order', status:'checked'},
+												{title:'Respect VIP points'},
+												{title:'Kosher'},
+												{title:'Delivery', status:'checked'},
+												{title:'Expresss'},
+											]
+
+										each item, index in filters
+											.filter__item
+												.input-check
+													if(item.status=='checked')
+														input(type='checkbox', id='filter'+index, checked='checked')
+													else
+														input(type='checkbox', id='filter'+index)
+													label.input-check__label(for='filter'+index)
+														span.input-check__mark
+															+svg('ic-check','ic-check', '16', '12')
+														span.input-check__text= item.title
+
+										
+									.filter__bottom
+										.filter__bottom-item
+											a(href="#").filter__clear clear all
+
+										.filter__bottom-item
+											a(href="#").filter__cancel Cancel
+											a(href="#").filter__apply Apply
+
+							.search
+								.search__btn
+									+svg('ic-search','ic-search ic-stroke', '20', '20')
+
+							a(href="#").btn.btn_grad-green Sign in
+
+					ul.bredcrumb
+						- var list=['Delivery', 'Food', 'Tel Aviv', 'Burgers', 'McDonalds']
+						each item in list
+							li.bredcrumb__item
+								a(href="#")= item
+
 		
 		section.detail-office
 			.container
@@ -57,7 +152,7 @@ block content
 									span.service-info__text= item.title
 
 									if(item.title=='Working hours')
-										.service-popup
+										.service-popup.active
 											.service-popup__content
 												.service-time
 													-
@@ -67,7 +162,7 @@ block content
 															{title:'T'},
 															{title:'W'},
 															{title:'T'},
-															{title:'F'},
+															{title:'F', status:'active'},
 															{title:'S'},
 														]
 													each day, index in days
