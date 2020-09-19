@@ -1,0 +1,40 @@
+extends ../layout/main
+
+block variables
+	- var title = 'More photos';
+
+block content
+	.modal-gallery
+		.modal-gallery__top
+			.modal-gallery__head All photos (15)
+			.modal-gallery__close
+				+svg('ic-grad-close','ic-grad-close', '40', '40')
+
+		section.gallery-slider
+			.gallery-slider__content
+				.gallery-slider__main(style="background-image: url(/assets/img/slider-big.jpg)")
+					.gallery-slider__label
+						.gallery-slider__name Our best deals
+						.gallery-slider__date 10/11/2019 at 19:32
+
+					.gallery-slider__arrow
+						.gallery-slider__next
+							+svg('ic-arrow-next','ic-arrow-next', '30', '50')
+						.gallery-slider__prev
+							+svg('ic-arrow-back','ic-arrow-back', '30', '50')
+
+				.gallery-slider__count 5 / 15
+
+			.gal-preview
+				.gal-preview__list
+						-
+							var list= [
+								'slider-preview1.jpg',
+								'slider-preview2.jpg',
+								'slider-preview3.jpg',
+								'slider-preview2.jpg',
+								'slider-preview1.jpg',
+								'slider-preview2.jpg'
+							]
+						each item in list
+							.gal-preview__item(style="background-image: url(/assets/img/"+item)
