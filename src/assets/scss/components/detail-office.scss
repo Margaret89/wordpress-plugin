@@ -270,16 +270,16 @@ a.service-info__item:hover .service-info__text{color: $color-red;}
 		width: 42px;
 		height: 42px;
 		border-radius: 50%;
-		background: #16a3f2;
+		background: #faf9f9;
 		margin: 0 10px;
 
-		.icon{fill: #fff;}
+		.icon{fill: $color-grey;}
 	}
 
-	&__item_grey{
-		background: #faf9f9;
+	&__item.active{
+		background: #16a3f2;
 
-		.icon{fill: $color-grey;}
+		.icon{fill: #fff;}
 	}
 }
 

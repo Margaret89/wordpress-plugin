@@ -110,14 +110,14 @@ block content
 								.icon-group__list
 									-
 										var list=[
-											{icon:'ic-accessibility-wc'},
-											{icon:'ic-deaf'},
-											{icon:'ic-accessibility'},
-											{icon:'ic-park', color:'grey'}
+											{icon:'ic-accessibility-wc', status:'active'},
+											{icon:'ic-deaf', status:'active'},
+											{icon:'ic-accessibility', status:'active'},
+											{icon:'ic-park'}
 										]
 
 									each item in list
-										.icon-group__item(class=item.color=='grey'?'icon-group__item_grey':'')
+										.icon-group__item(class=item.status=='active'?'active':'')
 											+svg(item.icon,item.icon, '25', '24')
 
 							.coins-panel
