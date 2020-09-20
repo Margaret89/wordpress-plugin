@@ -22,9 +22,19 @@
 		margin-bottom: 20px;
 	}
 
+	&__title_small{font-size: 2.5rem;}
+
 	&__text{
 		@include font(normal, normal, 1rem, 1.5, #4f4f4f);
+
+		p{
+			@include font(normal, normal, 1rem, 1.5, #4f4f4f);
+		}
 	}
+
+	.btn{min-width: 200px;}
+
+	& + .share-store{margin-top: -94px;}
 }
 
 .video{
@@ -63,4 +73,15 @@
 	&__play:hover{
 		transform: translateY(-50%) scale(1.1);
 	}
+}
+
+.share-store{
+	&__content{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	&__item{margin: 10px 20px;}
 }

@@ -1,0 +1,30 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Join our members club';
+	- var header_info = {title:'Join our members club', img:'join-new-rest.jpg'};
+
+block content
+	section.info-block
+		.container
+			.info-block__item
+				.info-block__content
+					.info-block__title.info-block__title_small Get benefits
+
+					.info-block__text
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.
+						p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam
+
+						a(href="#").btn Join
+
+				.info-block__img
+					img(src="/assets/img/get -benefits.png", alt="")
+					
+	section.share-store
+		.container
+			.share-store__content
+				a(href="#").share-store__item
+					img(src="/assets/img/app-store.svg", alt="")
+
+				a(href="#").share-store__item
+					img(src="/assets/img/google-play.svg", alt="")
