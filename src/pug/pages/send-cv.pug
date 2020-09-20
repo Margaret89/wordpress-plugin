@@ -1,0 +1,98 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Vacancy';
+	- var header_info = {title:'We’re hiring', img:'join-new-rest.jpg'};
+	- var shadow_site='true';
+
+block modal
+	.popup-wrap
+		.popup
+			.popup__close
+				+svg('ic-grad-close','ic-grad-close', '32', '32')
+
+			.popup__top
+				.popup__head
+					.h2 Send CV
+			.popup__content
+				//- .form-new-user
+				form.form-site-wrap
+					.form-site
+						.form-site__content
+							.form-site__field-wrap
+								.form-site__field
+									.form-site__label Full name
+									.form-site__input
+										input(type='text', placeholder='How can we call you?', value="Adam Kurtz")
+
+								.form-site__field
+									.form-site__label Phone
+									.form-site__input
+										input(type='tel', placeholder='(972)', value="+972 12 34 567")
+
+
+							.form-site__field
+								.form-site__label-wrap
+									.form-site__label Notes
+									.form-site__msg-count 0/134
+
+								.form-site-msg
+									textarea(placeholder="Type your message")
+									+svg('ic-smile','ic-smile', '24', '24')
+
+							.file-upload
+								label.file-upload__content
+									input(type='file', name='file')
+									span.file-upload__btn
+										+svg('ic-attach','ic-attach', '24', '24')
+									span.file-upload__name Attach file
+
+								span.file-upload__res CV.doc
+										span.file-upload__res-del
+											+svg('ic-minus','ic-minus', '10', '2')
+
+					.form-site__btn
+						button.btn(type='submit')
+							span Send
+
+block content
+	section
+		.container
+			.vacancy
+				-
+					var list=[
+						{title:'Cashier', img:'cv1.jpg'},
+						{title:'Waiter', img:'cv2.jpg'},
+					]
+
+				each item in list
+					.vacancy__item
+						.vacancy__content
+							.vacancy__title= item.title
+
+							.vacancy__text
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis vulputate fusce urna vestibulum. Lectus augue tempor phasellus quam molestie est phasellus sed lectus. Pretium pulvinar arcu quam tortor molestie leo urna porta molestie. Amet nunc in mi, lorem:
+								ul
+									li nunc, adipiscing est vestibulum suspendisse placerat eros 
+									li aliquet sed aliquet malesuada faucibus porta pellentesque vulputate 
+									li curabitur nunc nulla nunc egestas pellentesque nulla risus
+							
+							.vacancy__bottom
+								a(href="#").vacancy__link
+									span.vacancy__link-text Send cv
+									+svg('ic-arrow-right','ic-arrow-right ic-white', '14', '11')
+
+								.social-circle
+									a(href="#").social-circle__item.social-circle__item_fb
+										+svg('ic-facebook','ic-facebook', '16', '16')
+
+									a(href="#").social-circle__item.social-circle__item_tg
+										+svg('ic-telegram','ic-telegram', '16', '16')
+
+									a(href="#").social-circle__item.social-circle__item_wh
+										+svg('ic-whatsapp','ic-whatsapp', '16', '16')
+
+									a(href="#").social-circle__item
+										+svg('ic-gmail','ic-gmail', '16', '16')
+						
+						.vacancy__img(style="background-image: url(/assets/img/"+item.img+")")

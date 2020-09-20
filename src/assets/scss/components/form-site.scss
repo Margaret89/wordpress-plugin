@@ -76,16 +76,16 @@
 		margin-bottom: 6px;
 	}
 
-	// &__label-wrap{
-	// 	display: flex;
-	// 	justify-content: space-between;
-	// 	align-items: center;
-	// }
+	&__label-wrap{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-	// &__msg-count{
-	// 	@include font(normal, normal, 1rem, 1.2, #b3b3b3);
-	// 	margin-bottom: 6px;
-	// }
+	&__msg-count{
+		@include font(normal, normal, 1rem, 1.2, #b3b3b3);
+		margin-bottom: 6px;
+	}
 
 	&__field-wrap{
 		display: flex;
@@ -419,80 +419,81 @@
 // // 	}
 // // }
 
-// .file-upload{
-// 	display: inline-flex;
-// 	align-items: center;
-// 	flex-wrap: wrap;
+.file-upload{
+	display: inline-flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: -5px;
 
-// 	input[type="file"]{display: none;}
+	input[type="file"]{display: none;}
 
-// 	&__content{
-// 		display: inline-flex;
-// 		align-items: center;
-// 		margin: 0;
-// 		margin-right: 28px;
-// 		cursor: pointer;
-// 	}
+	&__content{
+		display: inline-flex;
+		align-items: center;
+		margin: 0;
+		margin-right: 28px;
+		cursor: pointer;
+	}
 
-// 	&__btn{
-// 		display: inline-flex;
-// 		justify-content: center;
-// 		align-items: center;
-// 		height: 48px;
-// 		width: 48px;
-// 		border-radius: 50%;
-// 		background:rgba(214, 11, 82, 0.2);
+	&__btn{
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		height: 48px;
+		width: 48px;
+		border-radius: 50%;
+		background:rgba(214, 11, 82, 0.2);
 
-// 		.icon{
-// 			fill: $color-red;
-// 			vertical-align: top;
-// 		}
-// 	}
+		.icon{
+			fill: $color-red;
+			vertical-align: top;
+		}
+	}
 
-// 	&__btn:hover{
-// 		background:rgba(214, 11, 82, 0.3);
-// 	}
+	&__btn:hover{
+		background:rgba(214, 11, 82, 0.3);
+	}
 
-// 	&__name{
-// 		@include font(normal, normal, 1rem, 1.2, #e34b36);
-// 		margin-left: 16px;
-// 	}
+	&__name{
+		@include font(normal, normal, 1rem, 1.2, #e34b36);
+		margin-left: 16px;
+	}
 
-// 	&__res{
-// 		display: inline-block;
-// 		height: 2rem;
-// 		border-radius: 1rem;
-// 		padding: 8px 16px;
-// 		background: rgba(176, 176, 176, 0.2);
-// 		@include font(normal, normal, 0.875rem, 1.2, #666666);
-// 		margin: 8px 16px 8px 0;
-// 		white-space: nowrap;
-// 	}
+	&__res{
+		display: inline-block;
+		height: 2rem;
+		border-radius: 1rem;
+		padding: 8px 16px;
+		background: rgba(176, 176, 176, 0.2);
+		@include font(normal, normal, 0.875rem, 1.2, #666666);
+		margin: 8px 16px 8px 0;
+		white-space: nowrap;
+	}
 
-// 	&__res-del{
-// 		display: inline-flex;
-// 		justify-content: center;
-// 		align-items: center;
-// 		vertical-align: middle;
-// 		width: 16px;
-// 		height: 16px;
-// 		border-radius: 50%;
-// 		background: #fff;
-// 		margin-left: 8px;
-// 		transition: all 0.3s ease 0s;
-// 		cursor: pointer;
+	&__res-del{
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		vertical-align: middle;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background: #fff;
+		margin-left: 8px;
+		transition: all 0.3s ease 0s;
+		cursor: pointer;
 
-// 		.icon{
-// 			fill: $color-grey;
-// 			vertical-align: top;
-// 		}
-// 	}
+		.icon{
+			fill: $color-grey;
+			vertical-align: top;
+		}
+	}
 
-// 	&__res-del:hover{
-// 		background: #ffb3cc;
-// 		.icon{fill: $color-red;}
-// 	}
-// }
+	&__res-del:hover{
+		background: #ffb3cc;
+		.icon{fill: $color-red;}
+	}
+}
 
 // .form-new-user,
 // .form-refund{
@@ -500,20 +501,21 @@
 // 	margin: 0 auto;
 // }
 
-// .form-site-msg{
-// 	position: relative;
+.form-site-msg{
+	position: relative;
 
-// 	.ic-smile{
-// 		fill: #858585;
-// 		position: absolute;
-// 		top: 20px;
-// 		right: 20px;
-// 	}
+	.ic-smile{
+		fill: #858585;
+		position: absolute;
+		top: 12px;
+		right: 24px;
+	}
 
-// 	textarea{
-// 		padding: 21px 50px 16px 24px;
-// 	}
-// }
+	textarea{
+		height: 160px;
+		padding: 16px 50px 16px 24px;
+	}
+}
 
 
 html[dir="rtl"]{
@@ -535,36 +537,37 @@ html[dir="rtl"]{
 			margin-left: 10px;
 		}
 	}
-// 	.file-upload{
-// 		&__name{
-// 			margin-left: 0;
-// 			margin-right: 16px;
-// 		}
 
-// 		&__res-del{
-// 			margin-left: 0;
-// 			margin-right: 8px;
-// 		}
+	.file-upload{
+		&__name{
+			margin-left: 0;
+			margin-right: 16px;
+		}
 
-// 		&__content{
-// 			margin-right: 0;
-// 			margin-left: 28px;
-// 		}
+		&__res-del{
+			margin-left: 0;
+			margin-right: 8px;
+		}
 
-// 		&__res{
-// 			margin-right: 0;
-// 			margin-left: 16px;
-// 		}
-// 	}
+		&__content{
+			margin-right: 0;
+			margin-left: 28px;
+		}
 
-// 	.form-site-msg{
-// 		.ic-smile{
-// 			right: auto;
-// 			left: 20px;
-// 		}
+		&__res{
+			margin-right: 0;
+			margin-left: 16px;
+		}
+	}
 
-// 		textarea{
-// 			padding: 21px 24px 16px 50px;
-// 		}
-// 	}
+	.form-site-msg{
+		.ic-smile{
+			right: auto;
+			left: 20px;
+		}
+
+		textarea{
+			padding: 16px 24px 16px 50px;
+		}
+	}
 }

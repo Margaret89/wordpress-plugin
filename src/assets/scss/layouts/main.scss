@@ -6,6 +6,12 @@ body{
 	box-sizing:border-box;
 }
 
+body.no-scroll {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
 // html{
 // 	direction: ltr!important;
 // }
@@ -124,6 +130,26 @@ main{
 	width: calc(100% - 80px);
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.shadow-site{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(13, 13, 13, 0.7);
+	z-index: 109;
+
+	&.is-visible{
+		display: block;
+	}
+
+	&.is-visible + .wrapper header,
+	&.is-visible + .wrapper main{
+		filter: blur(5px);
+	}
 }
 
 .btn,
