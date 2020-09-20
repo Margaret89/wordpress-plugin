@@ -520,11 +520,12 @@ html[dir="rtl"]{
 	.form-site{
 		input[type="date"],
 		input[type="time"]{
-			padding-right: 0;
+			padding-right: 24px;
 			padding-left: 40px;
 		}
 
-		.input-date::after{
+		.input-date::after,
+		.input-time::after{
 			right: auto;
 			left: 14px;
 		}

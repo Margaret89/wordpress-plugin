@@ -1,0 +1,124 @@
+/*-------------- vacancy -----------------*/
+.vacancy{
+	margin-top: 8px;
+
+	&__item{
+		display: flex;
+		justify-content: space-between;
+		background: #fff;
+		margin-bottom: 20px;
+		border-radius: 12px;
+		box-shadow: 0px 20px 40px rgba(212, 212, 212, 0.25);
+		overflow: hidden;
+	}
+
+	&__img{
+		width: 36.8%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	&__content{
+		width: 63.2%;
+		padding: 22px 24px 17px;
+	}
+
+	&__title{
+		@include font(normal, 500, 1.25rem, 1.2, $color-text);
+		margin-bottom: 13px;
+	}
+
+	&__text{
+		@include font(normal, normal, 1rem, 1.375, $color-grey);
+
+		p{
+			@include font(normal, normal, 1rem, 1.375, $color-grey);
+		}
+
+		p,
+		li{
+			line-height: 1.375;
+		}
+
+		p + ul{margin-top: -10px;}
+	}
+
+	&__bottom{
+		display: flex;
+		justify-content: space-between;align-items: center;
+		margin-top: 10px;
+	}
+
+	&__link{
+		@include font(normal, 500, 0.875rem, 1.2, $color-red);
+		text-transform: uppercase;
+		margin-left: 6px;
+
+		.icon{
+			vertical-align: middle;
+			fill: $color-red;
+			margin-left: 6px;
+		}
+	}
+
+	&__link-text{position: relative;}
+
+	&__link-text::after{
+		content: '';
+		display: inline-block;
+		vertical-align: top;
+		width: 100%;
+		height: 1px;
+		background: $color-red;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		margin-top: 1px;
+	}
+
+	&__link:hover &__link-text::after{display: none;}
+}
+
+.social-circle{
+	display: flex;
+	align-items: center;
+
+	&__item{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		background: #faf9f9;
+		margin: 0 4px;
+		transition: all 0.2s ease;
+		cursor: pointer;
+
+		.icon{fill: #fff;}
+	}
+
+	&__item_fb{background: #475993;}
+	&__item_tg{background: #16A3F2;}
+	&__item_wh{background: #48B26B;}
+
+	&__item:hover{background: #e4e3e3;}
+	&__item_fb:hover{background: #3e4d80;}
+	&__item_tg:hover{background: #138fd6;}
+	&__item_wh:hover{background: #43a764;}
+}
+
+html[dir="rtl"]{
+	.vacancy{
+		&__link{
+			margin-left: 0;
+			margin-right: 6px;
+
+			.icon{
+				margin-left: 0;
+				margin-right: 6px;
+			}
+		}
+	}
+}
