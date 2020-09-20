@@ -1,0 +1,78 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Join us';
+	- var header_info = {title:'Join us', img:'join-new-rest.jpg', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'};
+
+block content
+	section.info-block
+		.container
+				-
+					var list=[
+						{
+							img:'delivery.png',
+							title:'Delivery',
+							text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et risus mattis ornare cum accumsan fringilla malesuada. Eu pellentesque at nibh iaculis aenean placerat lacus. Mattis mauris integer facilisi a vitae facilisis aliquet arcu.'
+						},
+						{
+							img:'gifts.png',
+							title:'Gifts',
+							text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et risus mattis ornare cum accumsan fringilla malesuada. Eu pellentesque at nibh iaculis aenean placerat lacus. Mattis mauris integer facilisi a vitae facilisis aliquet arcu.'
+						},
+						{
+							img:'special-coupons.png',
+							title:'Special coupons',
+							text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et risus mattis ornare cum accumsan fringilla malesuada. Eu pellentesque at nibh iaculis aenean placerat lacus. Mattis mauris integer facilisi a vitae facilisis aliquet arcu.',
+							video: 'true',
+						},
+					]
+
+				each item in list
+					.info-block__item
+						.info-block__content
+							.info-block__title= item.title
+							.info-block__text= item.text
+
+						.info-block__img
+							if(item.video)
+								.video
+									img(src="/assets/img/"+item.img, alt="")
+									a(href="#").video__play
+							else
+								img(src="/assets/img/"+item.img, alt="")
+
+	section.form-page.bg-gradient.last-indent
+		.container
+			.form-contact
+				form
+					.form-site.form-site_white
+						.form-site__title Contact us
+
+						.form-site__content
+							.form-site__field
+								.form-site__label Contact’s name
+								.form-site__input
+									input(type='text', placeholder='How can we call you?')
+
+							.form-site__field
+								.form-site__label Restaurant’s name
+								.form-site__input
+									input(type='text', placeholder='What is your restaurant name?')
+
+							.form-site__field
+								.form-site__label Phone
+								.form-site__input
+									input(type='tel', placeholder='(972)')
+
+							.form-site__polit
+								.input-check.input-check_white
+									input#checkbox1(type='checkbox', checked='checked')
+									label.input-check__label(for='checkbox1')
+										span.input-check__mark
+											+svg('ic-check','ic-check', '16', '12')
+
+										span.input-check__text I accept Terms & Conditions and Privacy Policy.
+
+
+					.form-site__btn
+						button.btn.btn_white(type='submit') join
