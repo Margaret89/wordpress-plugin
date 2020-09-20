@@ -1,0 +1,53 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Contact us';
+	- var header_info = {title:'Contact us', img:'join-new-rest.jpg'};
+
+block content
+	section
+		.container
+			form
+				.form-page-contact
+					.form-site
+						.form-site__title Your opinion is very important to us!
+
+						.form-site__content
+							.form-site__field-wrap
+								.form-site__field
+									.form-site__label Full name
+									.form-site__input
+										input(type='text', placeholder='How can we call you?')
+
+								.form-site__field
+									.form-site__label Phone
+									.form-site__input
+										input(type='tel', placeholder='(972)')
+
+							.form-site__field-wrap
+								.form-site__field
+									.form-site__label Email
+									.form-site__input
+										input(type='email', placeholder='shlomi@gmail.com')
+
+								.form-site__field
+									.form-site__field-wrap
+										.form-site__field
+											.form-site__label Date
+											.form-site__input
+												.input-date
+													input(type='date', value='2020-04-10')
+
+										.form-site__field
+											.form-site__label Time
+											.form-site__input
+												.input-time
+													input(type='text', value='17:00')
+
+							.form-site__field
+								.form-site__label Comment
+								.form-site__input
+									textarea(placeholder="Some special wishes?")
+
+					.form-site__btn
+						button.btn(type='submit') Send

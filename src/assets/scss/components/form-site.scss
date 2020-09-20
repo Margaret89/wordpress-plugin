@@ -159,7 +159,7 @@
 
 	&__btn{
 		text-align: center;
-		margin-top: 25px;
+		margin-top: 40px;
 
 		.btn{min-width: 200px;}
 	}
@@ -177,6 +177,7 @@
 
 	&__polit{
 		margin-top: 25px;
+		margin-bottom: -15px;
 
 		.input-check__text{font-size: 0.875rem;}
 	}
@@ -245,10 +246,13 @@
 	padding: 47px 0 50px;
 }
 
-.form-spec-event{
+.form-spec-event,
+.form-page-contact{
 	max-width: 740px;
 	margin: 0 auto;
 }
+
+.form-page-contact{margin-top: 5px;}
 
 .form-contact{
 	max-width: 360px;
