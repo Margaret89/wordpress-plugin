@@ -53,6 +53,16 @@
 
 	.book-table{margin: 0 17px;}
 
+	.form-book-table{
+		max-width: 360px;
+		margin: 0 auto;
+	
+		.form-site{
+			&__field{margin-bottom: 21px;}
+			textarea{height: 80px;}
+		}
+	}
+
 	// &__btn{
 	// 	text-align: center;
 	// 	margin-top: 48px;

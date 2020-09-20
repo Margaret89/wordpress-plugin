@@ -102,6 +102,18 @@
 
 	&__field-wrap &__field-wrap &__field{margin-bottom: 0;}
 
+	&__link{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		@include font(normal, 500, 1rem, 1.2, $color-red);
+		margin-top: 12px;
+
+		.icon{margin-right: 12px;}
+	}
+
+	&__link:hover{color: $color-red-dark;}
+
 	// &__field .input-check__text{font-size: 0.875rem;}
 
 	// &__field-wrap{
@@ -251,6 +263,7 @@
 	max-width: 740px;
 	margin: 0 auto;
 }
+
 
 .form-page-contact{margin-top: 5px;}
 
