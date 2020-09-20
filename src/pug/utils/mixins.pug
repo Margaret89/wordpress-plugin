@@ -29,3 +29,18 @@ mixin progress(info)
 
 		.progress__field
 			.progress__line(style="width: "+info.percent+"%")
+
+mixin range(info)
+	.range
+		.range__top
+			.range__title= info.title
+			.range__val= info.val
+		
+		.range__progress
+			.range__line(style="width:"+info.width+"%")
+				.range__slider
+
+			.range__num
+				each item in info.list
+					.range__item(class=item.status?'active':'')
+						span.range__item-text= item.num

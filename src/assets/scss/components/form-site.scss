@@ -114,6 +114,7 @@
 
 	&__link:hover{color: $color-red-dark;}
 
+
 	// &__field .input-check__text{font-size: 0.875rem;}
 
 	// &__field-wrap{
@@ -194,6 +195,15 @@
 		.input-check__text{font-size: 0.875rem;}
 	}
 
+	.range:not(:last-child){margin-bottom: 37px;}
+
+	&__attach-wrap{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 46px;
+	}
+
 	// &__btn-label{
 	// 	@include font(normal, 500, 0.9rem, 1.2, $color-text);
 	// 	text-transform: uppercase;
@@ -264,12 +274,26 @@
 	margin: 0 auto;
 }
 
-
 .form-page-contact{margin-top: 5px;}
 
 .form-contact{
 	max-width: 360px;
 	margin: 0 auto;
+}
+
+.form-review{
+	margin: 46px 14px 0;
+
+	.form-site{
+		&__main{width: 56%;}
+		&__range-wrap{width: calc(44% - 80px);}
+		&__field{margin-bottom: 22px;}
+
+		&__content{
+			display: flex;
+			justify-content: space-between;
+		}
+	}
 }
 
 // // .input-auto{
@@ -468,7 +492,7 @@
 	}
 
 	&__name{
-		@include font(normal, normal, 1rem, 1.2, #e34b36);
+		@include font(normal, normal, 1rem, 1.2, $color-red);
 		margin-left: 16px;
 	}
 
