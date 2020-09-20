@@ -8,7 +8,7 @@ html(lang='ru')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
 		title #{title}
 
-	body
+	body(class=body_scroll=='false'?'no-scroll':'')
 		.shadow-site(class=shadow_site=='true'?'is-visible':'')
 		.wrapper
 			block modal

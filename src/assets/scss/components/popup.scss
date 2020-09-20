@@ -5,7 +5,7 @@
 	box-shadow: 0px 20px 40px rgba(210, 210, 210, 0.25);
 	width: 640px;
 	margin: 0 auto;
-	padding: 47px 64px 40px;
+	padding: 20px 64px 20px;
 	background: #fff;
 	position: fixed;
 	@include top-center;
@@ -26,13 +26,14 @@
 	width: 100%;
 	background: #fff;
 	position: relative;
+	padding: 27px 0 20px;
 
 	&__close{
 		display: inline-block;
 		width: 32px;
 		height: 32px;
 		position: absolute;
-		top: -28px;
+		top: -1px;
 		right: -44px;
 		cursor: pointer;
 	}
@@ -49,6 +50,8 @@
 	.form-site{
 		&__field{margin-bottom: 18px;}
 	}
+
+	.book-table{margin: 0 17px;}
 
 	// &__btn{
 	// 	text-align: center;
