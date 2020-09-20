@@ -98,17 +98,31 @@ block content
 			br
 			br
 			a.btn.btn_opacity(href='#') Button
+			br
+			br
+			a.btn.btn_white(href='#') Button
 
 		br
 		br
 		.h2 Checkbox
 		.input-check
-			input#checkbox1(type='checkbox', checked='checked')
-			label.input-check__label(for='checkbox1')
+			input#checkbox2(type='checkbox', checked='checked')
+			label.input-check__label(for='checkbox2')
 				span.input-check__mark
 					+svg('ic-check','ic-check', '16', '12')
 
 				span.input-check__text label
+
+		br
+		br
+		div(style="background: #f28f16; padding: 20px;")
+			.input-check.input-check_white
+				input#checkbox1(type='checkbox', checked='checked')
+				label.input-check__label(for='checkbox1')
+					span.input-check__mark
+						+svg('ic-check','ic-check', '16', '12')
+
+					span.input-check__text label
 		br
 		br
 		.h2 Mark
@@ -153,7 +167,39 @@ block content
 				color:'red'
 			}
 		+progress(info)
+
+		br
+		br
+		.h2 Counter
+		.counter
+			.counter__min
+				+svg('ic-minus','ic-minus', '18', '4')
+
+			input.counter__input(type='text', value='2')
+
+			.counter__max
+				+svg('ic-plus','ic-plus', '18', '18')
+
+		br
+		br
+
+		div(style="background: #f28f16; padding: 20px;")
+			.counter.counter_white
+				.counter__min
+					+svg('ic-minus','ic-minus', '18', '4')
+
+				input.counter__input(type='text', value='2')
+
+				.counter__max
+					+svg('ic-plus','ic-plus', '18', '18')
 		
+		
+		br
+		br
+		div.h2 Backgrounds
+		.bg-gradient(style="padding:40px")
+			p
+			| Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
 		
 		br
 		br
@@ -177,6 +223,16 @@ block content
 				.type-icon__img
 					+svg('ic-filter','ic-filter', '22', '22')
 				.type-icon__name ic-filter
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-minus','ic-minus', '18', '4')
+				.type-icon__name ic-minus
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-plus','ic-plus', '18', '18')
+				.type-icon__name ic-plus
 
 			.type-icon__item
 				.type-icon__img
@@ -207,6 +263,31 @@ block content
 				.type-icon__img
 					+svg('ic-arrow-next','ic-arrow-next', '12', '20')
 				.type-icon__name ic-arrow-next
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-edit','ic-edit', '16', '16')
+				.type-icon__name ic-edit
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-search','ic-search ic-stroke', '20', '20')
+				.type-icon__name ic-search
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-address','ic-address', '12', '16')
+				.type-icon__name ic-address
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-phone','ic-phone', '16', '16')
+				.type-icon__name ic-phone
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-grad-close','ic-grad-close', '20', '20')
+				.type-icon__name ic-grad-close
 
 			.type-icon__item
 				.type-icon__img
@@ -261,16 +342,6 @@ block content
 
 			.type-icon__item
 				.type-icon__img
-					+svg('ic-address','ic-address', '12', '16')
-				.type-icon__name ic-address
-
-			.type-icon__item
-				.type-icon__img
-					+svg('ic-phone','ic-phone', '16', '16')
-				.type-icon__name ic-phone
-
-			.type-icon__item
-				.type-icon__img
 					+svg('ic-instagram','ic-instagram', '16', '16')
 				.type-icon__name ic-instagram
 
@@ -296,15 +367,10 @@ block content
 
 			.type-icon__item
 				.type-icon__img
-					+svg('ic-edit','ic-edit', '16', '16')
-				.type-icon__name ic-edit
+					+svg('ic-calendar','ic-calendar', '20', '20')
+				.type-icon__name ic-calendar
 
 			.type-icon__item
 				.type-icon__img
-					+svg('ic-search','ic-search ic-stroke', '20', '20')
-				.type-icon__name ic-search
-
-			.type-icon__item
-				.type-icon__img
-					+svg('ic-grad-close','ic-grad-close', '20', '20')
-				.type-icon__name ic-grad-close
+					+svg('ic-watch','ic-watch', '20', '20')
+				.type-icon__name ic-watch

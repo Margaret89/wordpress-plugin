@@ -1,0 +1,560 @@
+/*-------------- form-site -----------------*/
+.form-site{
+	&__title{
+		@include font(normal, 500, 2.5rem, 1.2, $color-text);
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	
+	&__input{
+		position: relative;
+	}
+
+	input[type="text"],
+	input[type="tel"],
+	input[type="email"],
+	input[type="date"],
+	input[type="password"],
+	textarea,
+	select{
+		height: 3rem;
+		width: 100%;
+		outline: none;
+		border: 1px solid transparent;
+		border-radius: 1.5rem;
+		font-family: $font-site;
+		@include font(normal, normal, 1rem, 2.875rem, $color-text);
+		padding: 5px 24px 0;
+		margin: 0;
+		background: #faf9f9;
+		box-shadow: none;
+		transition: all 0.3s ease 0s;
+	}
+
+	input[type="date"]{padding-top: 3px;}
+
+	input[type="date"],
+	input[type="time"]{
+		padding-right: 40px;
+	}
+
+	input[type="text"]:focus,
+	input[type="tel"]:focus,
+	input[type="email"]:focus,
+	input[type="date"]:focus,
+	input[type="password"]:focus,
+	textarea:focus{
+		box-shadow: none;
+		border-color: $color-orange;
+	}
+
+	textarea{
+		height: 120px;
+		line-height: 1.2;
+		padding-top: 17px;
+		padding-bottom: 17px;
+		border-radius: 12px;
+	}
+
+	input[type="text"]::placeholder,
+	input[type="tel"]::placeholder,
+	input[type="email"]::placeholder,
+	input[type="date"]::placeholder,
+	input[type="password"]::placeholder,
+	textarea::placeholder{
+		color: #9b9b9b;
+		opacity: 1;
+	}
+
+	&__field{
+		margin-bottom: 22px;
+	}
+
+	&__label{
+		@include font(normal, 500, 0.75rem, 1.2, #9b9b9b);
+		text-transform: uppercase;
+		margin-bottom: 6px;
+	}
+
+	// &__label-wrap{
+	// 	display: flex;
+	// 	justify-content: space-between;
+	// 	align-items: center;
+	// }
+
+	// &__msg-count{
+	// 	@include font(normal, normal, 1rem, 1.2, #b3b3b3);
+	// 	margin-bottom: 6px;
+	// }
+
+	&__field-wrap{
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+
+	&__field-wrap &__field{
+		width: calc(50% - 20px);
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	&__field-wrap &__field-wrap &__field{margin-bottom: 0;}
+
+	// &__field .input-check__text{font-size: 0.875rem;}
+
+	// &__field-wrap{
+	// 	display: flex;
+	// 	justify-content: space-between;
+	// 	flex-wrap: wrap;
+	// 	margin-left: -16px;
+	// 	margin-right: -16px;
+	// }
+
+	// &__field-wrap:last-child{margin-bottom: -17px;}
+
+	// &__field-wrap &__field{
+	// 	width: calc(50% - 32px);
+	// 	margin-left: 16px;
+	// 	margin-right: 16px;
+	// }
+
+	// &__field-wrap_three{
+	// 	margin-left: -6px;
+	// 	margin-right: -6px;
+	// }
+
+	// &__field-wrap_three &__field{
+	// 	width: calc(33.33% - 12px);
+	// 	margin-left: 6px;
+	// 	margin-right: 6px;
+	// }
+
+	.input-date,
+	.input-time{
+		position: relative;
+	}
+
+	.input-date::after,
+	.input-time::after{
+		content: '';
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		@include top-center;
+		right: 14px;
+	}
+
+	.input-date::after{
+		background: url(/assets/img/ic-calendar.svg) no-repeat center;
+		background-size: contain;
+	}
+
+	.input-time::after{
+		background: url(/assets/img/ic-watch.svg) no-repeat center;
+		background-size: contain;
+	}
+
+	&__btn{
+		text-align: center;
+		margin-top: 25px;
+
+		.btn{min-width: 200px;}
+	}
+
+	&__count{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__count &__label{
+		margin-bottom: 0;
+		margin-right: 10px;
+	}
+
+	&__polit{
+		margin-top: 25px;
+
+		.input-check__text{font-size: 0.875rem;}
+	}
+
+	// &__btn-label{
+	// 	@include font(normal, 500, 0.9rem, 1.2, $color-text);
+	// 	text-transform: uppercase;
+	// 	margin-top: 24px;
+	// }
+
+	// &__check{
+	// 	display: table;
+	// 	margin: 0 auto;
+	// }
+
+	// &__notice{
+	// 	@include font(normal, normal, 1rem, 1.2, $color-red);
+	// 	margin-top: 16px;
+	// }
+
+	// &__notice img{
+	// 	display: inline-block;
+	// 	vertical-align: middle;
+	// 	margin-right: 8px;
+	// 	margin-top: -2px;
+	// }
+
+	&__field.error &__label{color: $color-red;}
+	&__field.error input[type="text"],
+	&__field.error input[type="tel"],
+	&__field.error input[type="email"],
+	&__field.error input[type="date"],
+	&__field.error textarea{
+		border-color: $color-red;
+	}
+
+	// &__field.error &__input::after{
+	// 	content: '';
+	// 	display: inline-block;
+	// 	width: calc(100% - 40px);
+	// 	height: 2px;
+	// 	background: $color-red;
+	// 	position: absolute;
+	// 	bottom: 11px;
+	// 	left: 0;
+	// 	right: 0;
+	// 	margin: 0 auto;
+	// }
+
+	&_white &__title,
+	&_white &__label{
+		color: #fff;
+	}
+
+	&_white input[type="text"],
+	&_white input[type="tel"],
+	&_white input[type="email"],
+	&_white input[type="date"],
+	&_white input[type="password"],
+	&_white textarea{
+		background: #fff;
+	}
+}
+
+.form-page{
+	padding: 47px 0 50px;
+}
+
+.form-spec-event{
+	max-width: 740px;
+	margin: 0 auto;
+}
+
+// // .input-auto{
+// // 	width: 100%;
+// // 	position: relative;
+
+// // 	&__list{
+// // 		// display: none;
+// // 		display: block;
+// // 		background: #faf9f9;
+// // 		border-radius: 12px;
+// // 		max-height: 240px;
+// // 		overflow-y: auto;
+// // 		box-shadow: 0px 8px 12px rgba(187, 187, 187, 0.25);
+// // 		position: absolute;
+// // 		top: 100%;
+// // 		left: 0;
+// // 		right: 0;
+// // 		margin: 8px auto 0;
+// // 		z-index: 10;
+// // 	}
+
+// // 	// &:hover &__list{
+// // 	// 	display: block;
+// // 	// }
+
+// // 	&__item{
+// // 		@include font(normal, normal, 1rem, 1.2, #777777);
+// // 		padding: 10px 24px 8px;
+// // 		cursor: pointer;
+// // 		position: relative;
+// // 	}
+
+// // 	&__item:not(:last-child)::after{
+// // 		content: '';
+// // 		display: inline-block;
+// // 		width: calc(100% - 48px);
+// // 		height: 1px;
+// // 		background: #e9e9e9;
+// // 		position: absolute;
+// // 		bottom: 0;
+// // 		left: 0;
+// // 		right: 0;
+// // 		margin: 0 auto;
+// // 	}
+
+// // 	&__item.active,
+// // 	&__item:hover{
+// // 		background: #efefef;
+// // 	}
+// // }
+
+// // .payment{
+// // 	display: table;
+// // 	margin: 0 auto;
+
+// // 	&__check{
+// // 		display: table;
+// // 		margin: 0 auto;
+// // 	}
+// // }
+
+// // .payment-pay{
+// // 	display: flex;
+// // 	justify-content: space-between;
+// // 	align-items: flex-end;
+// // 	margin-top: 30px;
+
+// // 	&__text{
+// // 		@include font(normal, 500, 1.25rem, 1.2, #4a4a4a);
+// // 		text-transform: uppercase;
+// // 		margin-bottom: 10px;
+// // 	}
+// // }
+
+// // .payment-sum{
+// // 	&__title{
+// // 		@include font(normal, 500, 0.75rem, 1.2, #4a4a4a);
+// // 		text-transform: uppercase;
+// // 		text-align: center;
+// // 		margin-bottom: 5px;
+// // 	}
+
+// // 	&__field{
+// // 		display: inline-block;
+// // 		height: 3rem;
+// // 		width: 198px;
+// // 		border-radius: 1.5rem;
+// // 		@include font(normal, 500, 1.5rem, 3rem, $color-red);
+// // 		text-align: center;
+// // 		padding: 0 20px;
+// // 		background: #faf9f9;
+// // 	}
+// // }
+
+// // html[dir="rtl"]{
+// // 	.form-site{
+// // 		&__notice img{
+// // 			margin-right: 0;
+// // 			margin-left: 8px;
+// // 		}
+// // 	}
+// // }
+
+// // @media (max-width: 767px) {
+// // 	.form-site{
+// // 		&__content{width: 100%;}
+// // 		&__content_center{
+// // 			display: flex;
+// // 			flex-direction: column;
+// // 			justify-content: center;
+// // 			height: calc(100% - 140px);
+// // 		}
+
+// // 		&__check{width: 100%;}
+// // 		&__field{margin-bottom: 25px;}
+// // 		&__btn{margin-top: 35px;}
+
+// // 		&__field-wrap{
+// // 			margin-left: -7px;
+// // 			margin-right: -7px;
+// // 		}
+
+// // 		&__field-wrap &__field {
+// // 			width: calc(50% - 14px);
+// // 			margin-left: 7px;
+// // 			margin-right: 7px;
+// // 		}
+
+// // 		&__field-wrap &__field_mob-full{
+// // 			width: calc(100% - 14px);
+// // 		}
+// // 	}
+
+// // 	.payment{
+// // 		display: block;
+// // 		&__check{display: block;}
+
+// // 		.card-check__img{
+// // 			width: 50px;
+// // 			height: 50px;
+// // 		}
+
+// // 		.card-check__text{width: calc(100% - 92px);}
+// // 		.card-check__label{min-height: 80px;}
+// // 	}
+
+// // 	.payment-pay{
+// // 		display: block;
+// // 		text-align: center;
+
+// // 		&__link{
+// // 			@include font(normal, 500, 1rem, 1.2, $color-red);
+// // 			margin-top: 8px;
+// // 		}
+
+// // 		&__link a{
+// // 			color: $color-red;
+// // 		}
+// // 	}
+// // }
+
+// .file-upload{
+// 	display: inline-flex;
+// 	align-items: center;
+// 	flex-wrap: wrap;
+
+// 	input[type="file"]{display: none;}
+
+// 	&__content{
+// 		display: inline-flex;
+// 		align-items: center;
+// 		margin: 0;
+// 		margin-right: 28px;
+// 		cursor: pointer;
+// 	}
+
+// 	&__btn{
+// 		display: inline-flex;
+// 		justify-content: center;
+// 		align-items: center;
+// 		height: 48px;
+// 		width: 48px;
+// 		border-radius: 50%;
+// 		background:rgba(214, 11, 82, 0.2);
+
+// 		.icon{
+// 			fill: $color-red;
+// 			vertical-align: top;
+// 		}
+// 	}
+
+// 	&__btn:hover{
+// 		background:rgba(214, 11, 82, 0.3);
+// 	}
+
+// 	&__name{
+// 		@include font(normal, normal, 1rem, 1.2, #e34b36);
+// 		margin-left: 16px;
+// 	}
+
+// 	&__res{
+// 		display: inline-block;
+// 		height: 2rem;
+// 		border-radius: 1rem;
+// 		padding: 8px 16px;
+// 		background: rgba(176, 176, 176, 0.2);
+// 		@include font(normal, normal, 0.875rem, 1.2, #666666);
+// 		margin: 8px 16px 8px 0;
+// 		white-space: nowrap;
+// 	}
+
+// 	&__res-del{
+// 		display: inline-flex;
+// 		justify-content: center;
+// 		align-items: center;
+// 		vertical-align: middle;
+// 		width: 16px;
+// 		height: 16px;
+// 		border-radius: 50%;
+// 		background: #fff;
+// 		margin-left: 8px;
+// 		transition: all 0.3s ease 0s;
+// 		cursor: pointer;
+
+// 		.icon{
+// 			fill: $color-grey;
+// 			vertical-align: top;
+// 		}
+// 	}
+
+// 	&__res-del:hover{
+// 		background: #ffb3cc;
+// 		.icon{fill: $color-red;}
+// 	}
+// }
+
+// .form-new-user,
+// .form-refund{
+// 	width: 65%;
+// 	margin: 0 auto;
+// }
+
+// .form-site-msg{
+// 	position: relative;
+
+// 	.ic-smile{
+// 		fill: #858585;
+// 		position: absolute;
+// 		top: 20px;
+// 		right: 20px;
+// 	}
+
+// 	textarea{
+// 		padding: 21px 50px 16px 24px;
+// 	}
+// }
+
+
+html[dir="rtl"]{
+	.form-site{
+		input[type="date"],
+		input[type="time"]{
+			padding-right: 0;
+			padding-left: 40px;
+		}
+
+		.input-date::after{
+			right: auto;
+			left: 14px;
+		}
+
+		&__count &__label{
+			margin-right: 0;
+			margin-left: 10px;
+		}
+	}
+// 	.file-upload{
+// 		&__name{
+// 			margin-left: 0;
+// 			margin-right: 16px;
+// 		}
+
+// 		&__res-del{
+// 			margin-left: 0;
+// 			margin-right: 8px;
+// 		}
+
+// 		&__content{
+// 			margin-right: 0;
+// 			margin-left: 28px;
+// 		}
+
+// 		&__res{
+// 			margin-right: 0;
+// 			margin-left: 16px;
+// 		}
+// 	}
+
+// 	.form-site-msg{
+// 		.ic-smile{
+// 			right: auto;
+// 			left: 20px;
+// 		}
+
+// 		textarea{
+// 			padding: 21px 24px 16px 50px;
+// 		}
+// 	}
+}

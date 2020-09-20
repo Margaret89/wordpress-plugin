@@ -1,0 +1,114 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Special event';
+	- var header_info = {title:'Special events', img:'special-event.jpg', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'};
+
+block content
+	section.info-block
+		.container
+				-
+					var list=[
+						{
+							img:'celebration.png',
+							title:'Celebration',
+							text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et risus mattis ornare cum accumsan fringilla malesuada. Eu pellentesque at nibh iaculis aenean placerat lacus. Mattis mauris integer facilisi a vitae facilisis aliquet arcu.'
+						},
+						{
+							img:'wedding.png',
+							title:'Wedding',
+							text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et risus mattis ornare cum accumsan fringilla malesuada. Eu pellentesque at nibh iaculis aenean placerat lacus. Mattis mauris integer facilisi a vitae facilisis aliquet arcu.'
+						},
+						{
+							img:'birthday.png',
+							title:'Birthday',
+							text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et risus mattis ornare cum accumsan fringilla malesuada. Eu pellentesque at nibh iaculis aenean placerat lacus. Mattis mauris integer facilisi a vitae facilisis aliquet arcu.'
+						},
+					]
+
+				each item in list
+					.info-block__item
+						.info-block__content
+							.info-block__title= item.title
+							.info-block__text= item.text
+
+						.info-block__img
+							img(src="/assets/img/"+item.img, alt="")
+
+	section.form-page.bg-gradient.last-indent
+		.container
+			.form-spec-event
+				form
+					.form-site.form-site_white
+						.form-site__title Book a special event
+
+						.form-site__content
+							.form-site__field-wrap
+								.form-site__field
+									.form-site__label Name
+									.form-site__input
+										input(type='text', placeholder='How can we call you?')
+
+								.form-site__field
+									.form-site__label Phone
+									.form-site__input
+										input(type='tel', placeholder='(972)')
+
+							.form-site__field-wrap
+								.form-site__field
+									.form-site__field-wrap
+										.form-site__field
+											.form-site__label Date
+											.form-site__input
+												.input-date
+													input(type='date', value='2020-04-10')
+
+										.form-site__field
+											.form-site__label Time
+											.form-site__input
+												.input-time
+													input(type='text', value='17:00')
+
+								.form-site__field
+									.form-site__label Event type
+									.form-site__input
+										select
+											option(value="", disabled, selected, hidden) Birthday
+											option(value="Param1") Parametr 1
+											option(value="Param2") Parametr 2
+											option(value="Param3") Parametr 3
+											option(value="Param4") Parametr 4
+											option(value="Param5") Parametr 5
+
+
+							.form-site__field-wrap
+								.form-site__field
+									.form-site__count
+										.form-site__label Diners
+
+										.counter.counter_white
+											.counter__min
+												+svg('ic-minus','ic-minus', '18', '4')
+
+											input.counter__input(type='text', value='2')
+
+											.counter__max
+												+svg('ic-plus','ic-plus', '18', '18')
+
+							.form-site__field
+								.form-site__label Comment
+								.form-site__input
+									textarea(placeholder="Some special wishes?")
+							
+							.form-site__polit
+								.input-check.input-check_white
+									input#checkbox1(type='checkbox', checked='checked')
+									label.input-check__label(for='checkbox1')
+										span.input-check__mark
+											+svg('ic-check','ic-check', '16', '12')
+
+										span.input-check__text I accept Terms & Conditions and Privacy Policy.
+
+
+					.form-site__btn
+						button.btn.btn_white(type='submit') Book

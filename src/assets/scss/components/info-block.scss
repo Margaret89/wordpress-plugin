@@ -1,0 +1,28 @@
+/*-------------- info-block -----------------*/
+.info-block{
+	margin-top: 8px;
+	margin-bottom: 116px;
+
+	&__item{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 40px;
+	}
+
+	&__item:nth-child(even){
+		flex-direction: row-reverse;
+	}
+
+	&__img{max-width: calc(63.2% - 30px);}
+	&__content{width: 36.8%;}
+
+	&__title{
+		@include font(normal, 500, 3rem, 1.2, $color-text);
+		margin-bottom: 20px;
+	}
+
+	&__text{
+		@include font(normal, normal, 1rem, 1.5, #4f4f4f);
+	}
+}

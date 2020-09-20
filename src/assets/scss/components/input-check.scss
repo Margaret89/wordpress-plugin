@@ -43,6 +43,17 @@
 		margin: 0 auto;
 		@include top-center;
 	}
+
+	&_white &__mark{
+		background: #fff;
+		border-color: #fff;
+		border-radius: 4px;
+	}
+
+	&_white &__text,
+	&_white input[type=checkbox]:checked + &__label &__text{
+		color: #fff;
+	}
 }
 
 html[dir="rtl"]{

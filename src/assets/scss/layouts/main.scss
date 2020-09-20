@@ -107,6 +107,8 @@ main{
 	padding: 40px 0;
 }
 
+.last-indent{margin-bottom: -40px;}
+
 .container{
 	width: calc(100% - 80px);
 	margin-left: auto;
@@ -201,6 +203,20 @@ button.btn_orange{
 input[type="submit"].btn_orange:hover,
 button.btn_orange:hover{
 	background: $color-orange-dark;
+}
+
+.btn_white,
+input[type="submit"].btn_white,
+button.btn_white{
+	background: #fff;
+	color: $color-orange;
+}
+
+.btn_white:hover,
+input[type="submit"].btn_white:hover,
+button.btn_white:hover{
+	background: $color-red;
+	color: #fff;
 }
 
 .btn_opacity,
@@ -301,6 +317,11 @@ button[disabled].btn_border-grad:hover .btn__grad-content{
 }
 
 button[disabled].btn_border-grad .icon{fill: $color-grey;}
+
+.bg-gradient{
+	background: linear-gradient(72.37deg, #F28F16 6.41%, #D60B52 95.11%);
+	color: #fff;
+}
 
 .code{
 	background-color: #f7f7f7;

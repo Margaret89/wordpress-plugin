@@ -9,13 +9,16 @@ mixin svg(icon, name_class, width,height)
 		use(xlink:href='assets/sprites/sprite.svg#'+icon)
 
 mixin header(info)
-	header.header(style="background-image: url(/assets/img/menus.jpg)")
+	header.header(style="background-image: url(/assets/img/"+info.img+")")
 		.container
 			a.header__back(href="#")
 				+svg('ic-arrow-left','ic-arrow-left ic-white', '16', '12')
 				| Back
 				
 			h1= info.title
+
+			if(info.text)
+				.header__text= info.text
 
 
 mixin progress(info)
