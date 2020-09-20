@@ -1,0 +1,99 @@
+/*-------------- notice-----------------*/
+.notice-layout{
+	display: flex;
+	flex-direction: column;
+	max-width: calc(100% - 48px);
+	position: absolute;
+	top: 24px;
+	right: 24px;
+	z-index: 1000;
+
+	.notice:not(:last-child){margin-bottom: 12px;}
+
+	&_top-left{
+		right: auto;
+		left: 24px;
+	}
+
+	&_bottom-right{
+		top: auto;
+		bottom: 24px;
+	}
+
+	&_bottom-left{
+		right: auto;
+		top: auto;
+		bottom: 24px;
+	}
+}
+
+.notice{
+	display: inline-block;
+	width: 335px;
+	max-width: 100%;
+	background: #E0F9DC;
+	border-radius: 12px;
+	@include font(normal, 500, 1rem, 1.2, $color-green);
+	padding: 10px 40px 10px 16px;
+	box-shadow: 0px 12px 20px rgba(65, 65, 65, 0.25);
+	position: relative;
+	opacity: 0.95;
+
+	&__close{
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		right: 12px;
+		@include top-center;
+		cursor: pointer;
+
+		.icon{
+			display: inline-block;
+			vertical-align: top;
+			width: 100%;
+			height: 100%;
+			fill: $color-green;
+			transition: all 0.3s ease 0s;
+		}
+	}
+
+	&__close:hover .icon{fill: $color-dark-green;}
+
+	&_red{
+		background: #F6DBE4;
+		box-shadow: 0px 12px 20px rgba(65, 65, 65, 0.25);
+		color: $color-red;
+	}
+
+	&_red &__close .icon{fill: $color-red;}
+	&_red &__close:hover .icon{fill: $color-red-dark;}
+}
+
+html[dir="rtl"]{
+	.notice-layout{
+		right: auto;
+		left: 24px;
+
+		&_bottom-right{
+			right: auto;
+			left: 24px;
+		}
+
+		&_top-left,
+		&_bottom-left{
+			right: 24px;
+			left: auto;
+		}
+	}
+
+	.notice{
+		padding-left: 40px;
+		padding-right: 16px;
+
+		&__close{
+			right: auto;
+			left: 12px;
+		}
+	}
+}

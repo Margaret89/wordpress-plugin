@@ -203,6 +203,21 @@ block content
 		
 		br
 		br
+		.h2 Notice
+		.notice
+			| Success!
+			.notice__close
+				+svg('ic-close-circle','ic-close-circle', '20', '20')
+
+		br
+		br
+		.notice.notice_red
+			| Sorry, no available tables! Try another date or time
+			.notice__close
+				+svg('ic-close-circle','ic-close-circle', '20', '20')
+			
+		br
+		br
 		div.h2 Icons
 
 		div(style="background: #f28f16; padding: 10px;")
@@ -293,6 +308,11 @@ block content
 				.type-icon__img
 					+svg('ic-grad-close','ic-grad-close', '20', '20')
 				.type-icon__name ic-grad-close
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-close-circle','ic-close-circle', '20', '20')
+				.type-icon__name ic-close-circle
 
 			.type-icon__item
 				.type-icon__img
