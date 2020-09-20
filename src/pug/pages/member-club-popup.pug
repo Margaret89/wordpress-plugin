@@ -1,0 +1,94 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Join our members club';
+	- var header_info = {title:'Join our members club', img:'join-new-rest.jpg'};
+	- var shadow_site='true';
+
+block modal
+	.popup-wrap
+		.popup
+			.popup__close
+				+svg('ic-grad-close','ic-grad-close', '32', '32')
+
+			.popup__top
+				.popup__head
+					.h2 Join our members club
+			.popup__content
+				//- .form-new-user
+				form.form-site-wrap
+					.form-site
+						.form-site__content
+							.form-site__field-wrap
+								.form-site__field
+									.form-site__label Full name
+									.form-site__input
+										input(type='text', placeholder='How can we call you?', value="Linda")
+
+								.form-site__field
+									.form-site__label LAST name
+									.form-site__input
+										input(type='text', placeholder='How can we call you?', value="Linda")
+
+							.form-site__field-wrap
+								.form-site__field
+									.form-site__label Email
+									.form-site__input
+										input(type='email', placeholder='shlomi@gmail.com', value="lsmith_1@gmail.com")
+
+								.form-site__field
+									.form-site__label Phone
+									.form-site__input
+										input(type='tel', placeholder='(972)', value="0552226266")
+
+							.form-site__field-wrap
+								.form-site__field
+									.form-site__label Birthday
+									.form-site__input
+										input(type='date', placeholder='dd-mm-yy')
+
+								.form-site__field
+									.form-site__label Wadding day
+									.form-site__input
+										input(type='date', placeholder='dd-mm-yy')
+
+							.form-site__field
+								.form-site__label Favorite branch
+								.form-site__input
+									select
+										option(value="", disabled, selected, hidden) Express
+										option(value="Param1") Parametr 1
+										option(value="Param2") Parametr 2
+										option(value="Param3") Parametr 3
+										option(value="Param4") Parametr 4
+										option(value="Param5") Parametr 5
+
+
+					.form-site__btn
+						button.btn(type='submit')
+							span join
+
+block content
+	section.info-block
+		.container
+			.info-block__item
+				.info-block__content
+					.info-block__title.info-block__title_small Get benefits
+
+					.info-block__text
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.
+						p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam
+
+						a(href="#").btn Join
+
+				.info-block__img
+					img(src="/assets/img/get -benefits.png", alt="")
+					
+	section.share-store
+		.container
+			.share-store__content
+				a(href="#").share-store__item
+					img(src="/assets/img/app-store.svg", alt="")
+
+				a(href="#").share-store__item
+					img(src="/assets/img/google-play.svg", alt="")
