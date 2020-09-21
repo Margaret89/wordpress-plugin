@@ -47,3 +47,168 @@ html[dir="rtl"]{
 		margin-left: 12px;
 	}
 }
+
+@media (max-width: 767px) {
+	.top-menu-wrap{
+		margin-bottom: 17px;
+
+		&__content{
+			flex-direction: column;
+		}
+	}
+
+	.top-menu{
+		flex-wrap: nowrap;
+		width: calc(100% + 40px);
+		overflow-x: auto;
+		margin-left: -20px;
+		margin-right: -20px;
+		padding: 0 20px 10px;
+		
+		&__item{
+			min-width: 100px;
+			position: relative;
+			margin-right: 8px;
+		}
+
+		&__item:last-child::after{
+			content: '';
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			top: 0;
+			left: 100%;
+			background: transparent;
+		}
+
+		&__item:hover,
+		&__item.active{
+			background: $color-red;
+		}
+	}
+
+	.top-action{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+
+		&__btn{
+			display: flex;
+			align-items: center;
+		}
+
+		.search{
+			margin-right: 8px;
+
+			&__btn{
+				width: 40px;
+				height: 40px;
+
+				.icon{
+					width: 16px;
+					height: 16px;
+				}
+			}
+		}
+
+		.filter{
+			position: static;
+
+			&__btn{
+				background: #fbedec;
+				width: 40px;
+				height: 40px;
+				position: static;
+
+				.icon{
+					width: 18px;
+					height: 18px;
+					fill: #e34836;
+				}
+			}
+
+			&__popup{
+				display: block;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				right: 100%;
+				left: auto;
+				overflow-y: auto;
+				margin: 0;
+				padding-top: 40px;
+				padding-bottom: 20px;
+				border-radius: 0;
+				transition: right 0.3s ease;
+				z-index: 100;
+			}
+
+			&.active .filter__popup{
+				right: 0;
+			}
+
+			&__bottom{padding-bottom: 20px;}
+
+			&__close{
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				background: #fbedec;
+				position: absolute;
+				top: 10px;
+				right: 10px;
+
+				.icon{fill: $color-red;}
+			}
+		}
+	}
+
+	html[dir="rtl"]{
+		.top-action{
+			.search{
+				margin-right: 0;
+				margin-left: 8px;
+			}
+
+			.filter{
+				&__popup{
+					left: 100%;
+					right: auto;
+					transition: left 0.3s ease;
+				}
+	
+				&.active .filter__popup{
+					left: 0;
+					right: auto;
+				}
+
+				&__close{
+					right: auto;
+					left: 20px;
+				}
+			}
+		}
+
+		.top-menu{
+			margin-left: -20px;
+			margin-right: -20px;
+
+			&__item{
+				margin-right: 0;
+				margin-left: 8px;
+			}
+
+			&__item:last-child::after{
+				left: auto;
+				right: 100%;
+			}
+		}
+
+		
+	}
+}

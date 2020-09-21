@@ -58,74 +58,74 @@ html[dir="rtl"]{
 	}
 }
 
-@media (max-width: 1199px) {
-	.catalog-menu{
-		display: flex;
-		width: 100%;
-		overflow-x: auto;
-		background: transparent;
-		box-shadow: none;
-		padding: 0;
-		margin-bottom: 24px;
+// @media (max-width: 1199px) {
+// 	.catalog-menu{
+// 		display: flex;
+// 		width: 100%;
+// 		overflow-x: auto;
+// 		background: transparent;
+// 		box-shadow: none;
+// 		padding: 0;
+// 		margin-bottom: 24px;
 
-		&__text{
-			white-space: nowrap;
-		}
+// 		&__text{
+// 			white-space: nowrap;
+// 		}
 
-		&__item{
-			border-radius: 12px;
-			background: #fff;
-			box-shadow: 0px 12px 20px rgba(171, 171, 171, 0.25);
-			transition: all 0.2s ease 0s;
-		}
+// 		&__item{
+// 			border-radius: 12px;
+// 			background: #fff;
+// 			box-shadow: 0px 12px 20px rgba(171, 171, 171, 0.25);
+// 			transition: all 0.2s ease 0s;
+// 		}
 
-		&__link{
-			width: 100%;
-			height: 100%;
-			padding: 16px 12px;
-		}
+// 		&__link{
+// 			width: 100%;
+// 			height: 100%;
+// 			padding: 16px 12px;
+// 		}
 
-		&__item.active,
-		&__item:hover{
-			background-color: $color-red;
-		}
+// 		&__item.active,
+// 		&__item:hover{
+// 			background-color: $color-red;
+// 		}
 
-		&__item.active &__text,
-		&__item:hover &__text{
-			color: #fff;
-		}
+// 		&__item.active &__text,
+// 		&__item:hover &__text{
+// 			color: #fff;
+// 		}
 
-		&__item:not(:last-child){
-			margin-bottom: 0;
-			margin-right: 8px;
-		}
+// 		&__item:not(:last-child){
+// 			margin-bottom: 0;
+// 			margin-right: 8px;
+// 		}
 
-		&__icon{
-			width: 16px;
-		}
-	}
+// 		&__icon{
+// 			width: 16px;
+// 		}
+// 	}
 
-	html[dir="rtl"]{
-		.catalog-menu{
-			&__item:not(:last-child){
-				margin-right: 0;
-				margin-left: 8px;
-			}
-		}
-	}
-}
+// 	html[dir="rtl"]{
+// 		.catalog-menu{
+// 			&__item:not(:last-child){
+// 				margin-right: 0;
+// 				margin-left: 8px;
+// 			}
+// 		}
+// 	}
+// }
 
-@media (max-width: 767px) {
-	.catalog-menu{
-		width: calc(100% + 40px);
-		border-radius: 0;
-		margin-left: -20px;
-		margin-right: -20px;
-		padding: 0 20px 20px;
-		background: #fff;
+// @media (max-width: 767px) {
+// 	.catalog-menu{
+// 		width: calc(100% + 40px);
+// 		border-radius: 0;
+// 		margin-left: -20px;
+// 		margin-right: -20px;
+// 		padding: 0 20px 20px;
+// 		background: #fff;
 
-		&__link{
-			padding: 14px 12px;
-		}
-	}
-}
+// 		&__link{
+// 			padding: 14px 12px;
+// 		}
+// 	}
+// }

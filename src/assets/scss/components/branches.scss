@@ -40,6 +40,8 @@
 		@include top-center;
 		right: 0;
 	}
+
+	&__text{max-width: calc(100% - 44px);}
 }
 
 .branch-list{
@@ -155,6 +157,70 @@ html[dir="rtl"]{
 		&__item .icon{
 			margin-right: 0;
 			margin-left: 12px;
+		}
+	}
+}
+
+@media (max-width: 1279px) {
+	.branch-list{
+		&__item{width: calc(33.33% - 20px);}
+	}
+}
+
+@media (max-width: 991px) {
+	.branch-list{
+		&__item{width: calc(50% - 20px);}
+	}
+}
+
+@media (max-width: 767px) {
+	.branch-list{
+		&__item{width: calc(100% - 20px);}
+		&__title{font-size: 1.25rem;}
+
+		&__content{
+			padding-top: 10px;
+			padding-bottom: 17px;
+		}
+	}
+
+	.branch-list-contact{
+		margin-top: 14px;
+
+		&__item:not(:last-child){margin-bottom: 9px;}
+	}
+
+	.branch-list-icons{
+		margin-top: 8px;
+
+		&__item{
+			width: 40px;
+			height: 40px;
+			margin: 0 4px;
+		}
+	}
+
+	.branch-cat{
+		width: 100%;
+		padding-bottom: 7px;
+
+		&__item{
+			width: 50%;
+			margin-bottom: 10px;
+			padding: 0 10px;
+		}
+
+		&__item:not(:last-child)::after{display: none;}
+
+		&__icon{margin-right: 8px;}
+	}
+
+	html[dir="rtl"]{
+		.branch-cat{
+			&__icon{
+				margin-right: 0;
+				margin-left: 8px;
+			}
 		}
 	}
 }

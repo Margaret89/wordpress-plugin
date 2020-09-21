@@ -70,3 +70,15 @@ html[dir="rtl"]{
 		}
 	}
 }
+
+@media (max-width: 991px) {
+	.header{height: 35vw;}
+}
+
+@media (max-width: 767px) {
+	.header{
+		height: 23.5vw;
+
+		h1, .h1{font-size: 20px; line-height: 1.2;}
+	}
+}

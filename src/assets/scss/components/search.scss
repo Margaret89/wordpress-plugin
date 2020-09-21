@@ -9,9 +9,22 @@
 		border-radius: 50%;
 		background: $color-red;
 		transition: all 0.2s ease;
+		cursor: pointer;
 
 		.icon{stroke: #fff;}
 	}
 
-	&__btn:hover{$color-red-dark:}
+	&__btn:hover{background: $color-red-dark;}
+
+	&_grey &__btn{
+		background: #faf9f9;
+
+		.icon{stroke: $color-grey;}
+	}
+
+	&_grey &__btn:hover{
+		background: $color-red;
+
+		.icon{stroke: #fff;}
+	}
 }

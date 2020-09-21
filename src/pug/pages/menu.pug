@@ -23,76 +23,92 @@ block content
 					each item in list
 						a.top-menu__item(href="#", class=item.status=='active'?'active':'')= item.title
 
-				.filter
-					.filter__btn
-						+svg('ic-filter','ic-filter', '22', '22')
-						+svg('ic-cancel','ic-cancel', '16', '16')
+				.top-action
+					.top-action__btn
+						.search.search_grey.d-md-none
+							.search__btn
+								+svg('ic-search','ic-search ic-stroke', '20', '20')
 
-					.filter__popup
-						-
-							var list=[
-								{img:'avocado.svg', title:'Vegan'},
-								{img:'gluten.svg', title:'More'},
-								{img:'broccoli.svg', title:'Vegeterian'},
-								{img:'avocado.svg', title:'Vegan'},
-								{img:'broccoli.svg', title:'Vegeterian'},
-								{img:'avocado.svg', title:'Vegan'},
-								{img:'gluten.svg', title:'More'},
-								{img:'avocado.svg', title:'Vegan'},
-								{img:'gluten.svg', title:'Ipsum'},
-								{img:'broccoli.svg', title:'Vegeterian'},
-								{img:'avocado.svg', title:'Lorem'},
-							]
+						.filter
+							.filter__btn
+								+svg('ic-filter','ic-filter', '22', '22')
+								+svg('ic-cancel','ic-cancel', '16', '16')
 
-						.cat-filter
-							each item in list
-								.cat-filter__item
-									.cat-filter__icon
-										img(src="/assets/img/"+item.img, alt="")
-									.cat-filter__text= item.title
+							.filter__popup
+								.filter__close
+									+svg('ic-close-thin','ic-close-thin', '16', '16')
+
+								-
+									var list=[
+										{img:'avocado.svg', title:'Vegan'},
+										{img:'gluten.svg', title:'More'},
+										{img:'broccoli.svg', title:'Vegeterian'},
+										{img:'avocado.svg', title:'Vegan'},
+										{img:'broccoli.svg', title:'Vegeterian'},
+										{img:'avocado.svg', title:'Vegan'},
+										{img:'gluten.svg', title:'More'},
+										{img:'avocado.svg', title:'Vegan'},
+										{img:'gluten.svg', title:'Ipsum'},
+										{img:'broccoli.svg', title:'Vegeterian'},
+										{img:'avocado.svg', title:'Lorem'},
+									]
+
+								.cat-filter
+									each item in list
+										.cat-filter__item
+											.cat-filter__icon
+												img(src="/assets/img/"+item.img, alt="")
+											.cat-filter__text= item.title
 
 
 
-						.filter__label Filters
+								.filter__label Filters
 
-						.filter__list
-							-
-								var filters=[
-									{title:'Popular'},
-									{title:'Takeaway'},
-									{title:'Nearby'},
-									{title:'Future order', status:'checked'},
-									{title:'Respect VIP points'},
-									{title:'Kosher'},
-									{title:'Delivery', status:'checked'},
-									{title:'Expresss'},
-								]
+								.filter__list
+									-
+										var filters=[
+											{title:'Popular'},
+											{title:'Takeaway'},
+											{title:'Nearby'},
+											{title:'Future order', status:'checked'},
+											{title:'Respect VIP points'},
+											{title:'Kosher'},
+											{title:'Delivery', status:'checked'},
+											{title:'Expresss'},
+										]
 
-							each item, index in filters
-								.filter__item
-									.input-check
-										if(item.status=='checked')
-											input(type='checkbox', id='filter'+index, checked='checked')
-										else
-											input(type='checkbox', id='filter'+index)
-										label.input-check__label(for='filter'+index)
-											span.input-check__mark
-												+svg('ic-check','ic-check', '16', '12')
-											span.input-check__text= item.title
+									each item, index in filters
+										.filter__item
+											.input-check
+												if(item.status=='checked')
+													input(type='checkbox', id='filter'+index, checked='checked')
+												else
+													input(type='checkbox', id='filter'+index)
+												label.input-check__label(for='filter'+index)
+													span.input-check__mark
+														+svg('ic-check','ic-check', '16', '12')
+													span.input-check__text= item.title
 
-							
-						.filter__bottom
-							.filter__bottom-item
-								a(href="#").filter__clear clear all
+									
+								.filter__bottom
+									.filter__bottom-item
+										a(href="#").filter__clear clear all
 
-							.filter__bottom-item
-								a(href="#").filter__cancel Cancel
-								a(href="#").filter__apply Apply
+									.filter__bottom-item
+										a(href="#").filter__cancel Cancel
+										a(href="#").filter__apply Apply
+
+					.view.d-md-none
+						.view__item.active
+							+svg('ic-view-line','ic-view-line', '20', '14')
+
+						.view__item
+							+svg('ic-view-tile','ic-view-tile', '14', '14')
 
 	section.catalog-wrap
 		.container
 			.catalog
-				.catalog-menu
+				.catalog-menu.d-none.d-lg-block
 					-
 						var list=[
 							{text:'Entrees', status:'active'},
@@ -118,6 +134,7 @@ block content
 								span.catalog-menu__text= item.text
 
 				.catalog__content
+					<!--if list tile we need add class .catalog-list.catalog-list_tile-->
 					.catalog-list
 						-
 							var list=[
@@ -143,6 +160,12 @@ block content
 									.catalog-list__info
 										.catalog-list__name
 											a(href='#')= item.name
+
+											.catalog-list__price-tile
+												.catalog-list__price-def= item.cur_price
+												if(item.old_price)
+													.catalog-list__price-old= item.old_price
+													
 										.catalog-list__text= item.text
 
 									.catalog-list__price
