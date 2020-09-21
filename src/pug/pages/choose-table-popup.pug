@@ -8,12 +8,19 @@ block variables
 block modal
 	.popup-wrap(style="width: 1000px;")
 		.popup
-			.popup__close
+			.popup__close.d-none.d-md-inline-block
 				+svg('ic-grad-close','ic-grad-close', '32', '32')
 
 			.popup__top
+				img.popup__bg-top.d-md-none(src='/assets/img/bg-mobile-head.svg', alt='')
+
+				.popup__back.d-md-none
+					+svg('ic-arrow-left','ic-arrow-left', '16', '12')
+					|back
+
 				.popup__head
 					.h2 Book a table
+					
 			.popup__content
 				//- .form-new-user
 				form
@@ -36,7 +43,7 @@ block modal
 									input(type='date', value='2020-04-10')
 									
 								.input-time
-									input(type='text', value='17:00 - 20:00')
+									input(type='time', value='17:00')
 
 						.book-table__list
 							-

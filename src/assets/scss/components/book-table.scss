@@ -25,6 +25,7 @@
 	input[type="tel"],
 	input[type="email"],
 	input[type="date"],
+	input[type="time"],
 	input[type="password"],
 	textarea,
 	select{
@@ -53,6 +54,7 @@
 	input[type="tel"]:focus,
 	input[type="email"]:focus,
 	input[type="date"]:focus,
+	input[type="time"]:focus,
 	input[type="password"]:focus,
 	textarea:focus{
 		box-shadow: none;
@@ -71,6 +73,7 @@
 	input[type="tel"]::placeholder,
 	input[type="email"]::placeholder,
 	input[type="date"]::placeholder,
+	input[type="time"]::placeholder,
 	input[type="password"]::placeholder,
 	textarea::placeholder{
 		color: #9b9b9b;
