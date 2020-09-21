@@ -74,3 +74,29 @@ html[dir="rtl"]{
 		}
 	}
 }
+
+@media (max-width: 991px) {
+	.footer{
+		&__price{margin-right: 20px;}
+	}
+
+	html[dir="rtl"]{
+		.footer{
+			&__price{
+				margin-right: 0;
+				margin-left: 20px;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.footer{
+		&__btn{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+		}
+	}
+}
