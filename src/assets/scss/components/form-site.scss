@@ -717,6 +717,8 @@ html[dir="rtl"]{
 			.input-check__text{color: $color-text;}
 		}
 
+		.input-check_white input[type="checkbox"]:checked + .input-check__label .input-check__text{color: $color-text;}
+
 		.btn_white{
 			@include gradient-orange;
 			color: #fff;

@@ -2,51 +2,66 @@ extends ../layout/main
 
 block variables
 	- var title = 'Join us';
-	- var header_info = {title:'Join us', img:'join-new-rest.jpg', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'};
+	- var header_info = {title:'Join us', img:'join-new-rest.jpg', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation', mobile:'hide'};
 
 block content
-	section.info-block
-		.container
-				-
-					var list=[
-						{
-							img:'delivery.png',
-							title:'Delivery',
-							text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et risus mattis ornare cum accumsan fringilla malesuada. Eu pellentesque at nibh iaculis aenean placerat lacus. Mattis mauris integer facilisi a vitae facilisis aliquet arcu.'
-						},
-						{
-							img:'gifts.png',
-							title:'Gifts',
-							text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et risus mattis ornare cum accumsan fringilla malesuada. Eu pellentesque at nibh iaculis aenean placerat lacus. Mattis mauris integer facilisi a vitae facilisis aliquet arcu.'
-						},
-						{
-							img:'special-coupons.png',
-							title:'Special coupons',
-							text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et risus mattis ornare cum accumsan fringilla malesuada. Eu pellentesque at nibh iaculis aenean placerat lacus. Mattis mauris integer facilisi a vitae facilisis aliquet arcu.',
-							video: 'true',
-						},
-					]
+	section.info-block-mob-slider
+		.info-block
+			.container
+				.info-block__head.d-md-none Join us
 
-				each item in list
-					.info-block__item
-						.info-block__content
-							.info-block__title= item.title
-							.info-block__text= item.text
+				.info-block__list
+					-
+						var list=[
+							{
+								img:'delivery.png',
+								bg:'bg-slide-special-join-us.jpg',
+								title:'Delivery',
+								text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et risus mattis ornare cum accumsan fringilla malesuada. Eu pellentesque at nibh iaculis aenean placerat lacus. Mattis mauris integer facilisi a vitae facilisis aliquet arcu.'
+							},
+							{
+								img:'gifts.png',
+								bg:'bg-slide-special-join-us.jpg',
+								title:'Gifts',
+								text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et risus mattis ornare cum accumsan fringilla malesuada. Eu pellentesque at nibh iaculis aenean placerat lacus. Mattis mauris integer facilisi a vitae facilisis aliquet arcu.'
+							},
+							{
+								img:'special-coupons.png',
+								bg:'bg-slide-special-join-us.jpg',
+								title:'Special coupons',
+								text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et risus mattis ornare cum accumsan fringilla malesuada. Eu pellentesque at nibh iaculis aenean placerat lacus. Mattis mauris integer facilisi a vitae facilisis aliquet arcu.',
+								video: 'true',
+							},
+						]
 
-						.info-block__img
-							if(item.video)
-								.video
+					each item in list
+						.info-block__item
+							.info-block__bg.d-md-none(style="background-image: url(/assets/img/"+item.bg+")")
+
+							.info-block__content
+								.info-block__title= item.title
+								.info-block__text= item.text
+
+							.info-block__img.d-none.d-md-block
+								if(item.video)
+									.video
+										img(src="/assets/img/"+item.img, alt="")
+										a(href="#").video__play
+								else
 									img(src="/assets/img/"+item.img, alt="")
-									a(href="#").video__play
-							else
-								img(src="/assets/img/"+item.img, alt="")
+
+				.info-block__nav.d-md-none
+					.info-block-dot
+						.info-block-dot__item.active
+						.info-block-dot__item
+						.info-block-dot__item
 
 	section.form-page.bg-gradient.last-indent
 		.container
 			.form-contact
 				form
 					.form-site.form-site_white
-						.form-site__title Contact us
+						.form-site__title.d-none.d-md-block Contact us
 
 						.form-site__content
 							.form-site__field
