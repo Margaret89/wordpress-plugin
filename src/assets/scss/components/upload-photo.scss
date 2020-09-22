@@ -84,3 +84,12 @@
 		margin: 10px;
 	}
 }
+
+@media (max-width: 767px) {
+	.upload-photo{
+		&_big &__item{
+			width: 90px;
+			height: 90px;
+		}
+	}
+}

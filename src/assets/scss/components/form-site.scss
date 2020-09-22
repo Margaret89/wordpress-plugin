@@ -668,4 +668,13 @@ html[dir="rtl"]{
 			}
 		}
 	}
+
+	.form-upload{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-height: 100%;
+		max-width: 100%;
+		margin: 0;
+	}
 }
