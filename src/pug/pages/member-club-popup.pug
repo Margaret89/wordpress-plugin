@@ -9,10 +9,16 @@ block variables
 block modal
 	.popup-wrap
 		.popup
-			.popup__close
+			.popup__close.d-none.d-md-inline-block
 				+svg('ic-grad-close','ic-grad-close', '32', '32')
 
 			.popup__top
+				img.popup__bg-top.d-md-none(src='/assets/img/bg-mobile-head.svg', alt='')
+
+				.popup__back.d-md-none
+					+svg('ic-arrow-back','ic-arrow-back', '12', '20')
+					|Back
+
 				.popup__head
 					.h2 Join our members club
 			.popup__content
@@ -42,7 +48,7 @@ block modal
 									.form-site__input
 										input(type='tel', placeholder='(972)', value="0552226266")
 
-							.form-site__field-wrap
+							.form-site__field-wrap.form-site__field-wrap_mob
 								.form-site__field
 									.form-site__label Birthday
 									.form-site__input
