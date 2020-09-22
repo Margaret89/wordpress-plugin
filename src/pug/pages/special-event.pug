@@ -2,45 +2,59 @@ extends ../layout/main
 
 block variables
 	- var title = 'Special event';
-	- var header_info = {title:'Special events', img:'special-event.jpg', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'};
+	- var header_info = {title:'Special events', img:'special-event.jpg', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation', mobile:'hide'};
 
 block content
-	section.info-block
-		.container
-				-
-					var list=[
-						{
-							img:'celebration.png',
-							title:'Celebration',
-							text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et risus mattis ornare cum accumsan fringilla malesuada. Eu pellentesque at nibh iaculis aenean placerat lacus. Mattis mauris integer facilisi a vitae facilisis aliquet arcu.'
-						},
-						{
-							img:'wedding.png',
-							title:'Wedding',
-							text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et risus mattis ornare cum accumsan fringilla malesuada. Eu pellentesque at nibh iaculis aenean placerat lacus. Mattis mauris integer facilisi a vitae facilisis aliquet arcu.'
-						},
-						{
-							img:'birthday.png',
-							title:'Birthday',
-							text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et risus mattis ornare cum accumsan fringilla malesuada. Eu pellentesque at nibh iaculis aenean placerat lacus. Mattis mauris integer facilisi a vitae facilisis aliquet arcu.'
-						},
-					]
+	section.info-block-mob-slider
+		.info-block
+			.container
+				.info-block__head.d-md-none Special event
+				
+				.info-block__list
+					-
+						var list=[
+							{
+								img:'celebration.png',
+								bg:'bg-slide-special-event.jpg',
+								title:'Celebration',
+								text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et risus mattis ornare cum accumsan fringilla malesuada. Eu pellentesque at nibh iaculis aenean placerat lacus. Mattis mauris integer facilisi a vitae facilisis aliquet arcu.'
+							},
+							{
+								img:'wedding.png',
+								bg:'bg-slide-special-event.jpg',
+								title:'Wedding',
+								text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et risus mattis ornare cum accumsan fringilla malesuada. Eu pellentesque at nibh iaculis aenean placerat lacus. Mattis mauris integer facilisi a vitae facilisis aliquet arcu.'
+							},
+							{
+								img:'birthday.png',
+								bg:'bg-slide-special-event.jpg',
+								title:'Birthday',
+								text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et risus mattis ornare cum accumsan fringilla malesuada. Eu pellentesque at nibh iaculis aenean placerat lacus. Mattis mauris integer facilisi a vitae facilisis aliquet arcu.'
+							},
+						]
 
-				each item in list
-					.info-block__item
-						.info-block__content
-							.info-block__title= item.title
-							.info-block__text= item.text
+					each item in list
+						.info-block__item
+							.info-block__bg.d-md-none(style="background-image: url(/assets/img/"+item.bg+")")
+							.info-block__content
+								.info-block__title= item.title
+								.info-block__text= item.text
 
-						.info-block__img
-							img(src="/assets/img/"+item.img, alt="")
+							.info-block__img.d-none.d-md-block
+								img(src="/assets/img/"+item.img, alt="")
+
+				.info-block__nav.d-md-none
+					.info-block-dot
+						.info-block-dot__item.active
+						.info-block-dot__item
+						.info-block-dot__item
 
 	section.form-page.bg-gradient.last-indent
 		.container
 			.form-spec-event
 				form
 					.form-site.form-site_white
-						.form-site__title Book a special event
+						.form-site__title.d-none.d-md-block Book a special event
 
 						.form-site__content
 							.form-site__field-wrap
@@ -56,7 +70,7 @@ block content
 
 							.form-site__field-wrap
 								.form-site__field
-									.form-site__field-wrap
+									.form-site__field-wrap.form-site__field-wrap_mob
 										.form-site__field
 											.form-site__label Date
 											.form-site__input

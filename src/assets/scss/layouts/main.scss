@@ -419,6 +419,10 @@ html[dir="rtl"]{
 	.d-md-none{display: none !important;}
 }
 
+@media (max-width: 991px) {
+	.h1, h1{font-size: 4.5rem;}
+}
+
 @media (max-width: 767px) {
 	html,
 	body{

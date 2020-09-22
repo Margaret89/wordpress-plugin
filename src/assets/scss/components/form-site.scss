@@ -649,6 +649,10 @@ html[dir="rtl"]{
 				margin: 0 auto;
 			}
 		}
+
+		&__field-wrap{flex-wrap: wrap;}
+		&__field-wrap &__field{width: calc(100% - 20px);}
+		&__field-wrap_mob &__field{width: calc(50% - 20px);}
 	}
 
 	.form-review{
@@ -676,5 +680,46 @@ html[dir="rtl"]{
 		min-height: 100%;
 		max-width: 100%;
 		margin: 0;
+	}
+
+	.form-page{
+		padding-bottom: 30px;
+		padding-top: 30px;
+
+		.form-site{
+			&__field{margin-bottom: 19px;}
+		}
+	}
+
+	.form-page.bg-gradient{
+		background: transparent;
+
+		.form-site{
+			&_white .form-site__title,
+			&_white .form-site__label{
+				color: #9b9b9b;
+			}
+
+			&_white .form-site__count .form-site__label{color: #000;}
+
+			&_white input[type="text"],
+			&_white input[type="tel"],
+			&_white input[type="email"],
+			&_white input[type="date"],
+			&_white input[type="password"],
+			&_white textarea{
+				background: #faf9f9;
+			}
+		}
+
+		.input-check_white{
+			.input-check__mark{border-color: #888;}
+			.input-check__text{color: $color-text;}
+		}
+
+		.btn_white{
+			@include gradient-orange;
+			color: #fff;
+		}
 	}
 }

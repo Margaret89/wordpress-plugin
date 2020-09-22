@@ -9,7 +9,7 @@ mixin svg(icon, name_class, width,height)
 		use(xlink:href='assets/sprites/sprite.svg#'+icon)
 
 mixin header(info)
-	header.header(style="background-image: url(/assets/img/"+info.img+")")
+	header.header(style="background-image: url(/assets/img/"+info.img+")", class=info.mobile=='hide'?'d-none d-md-block':'')
 		.container
 			a.header__back.d-none.d-md-block(href="#")
 				+svg('ic-arrow-left','ic-arrow-left ic-white', '16', '12')
