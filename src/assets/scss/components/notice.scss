@@ -97,3 +97,7 @@ html[dir="rtl"]{
 		}
 	}
 }
+
+@media (max-width: 767px) {
+	.notice-layout{max-width: calc(100% - 40px);}
+}

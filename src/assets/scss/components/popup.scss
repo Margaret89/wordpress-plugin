@@ -438,6 +438,12 @@ html[dir="rtl"]{
 		// .cat-coupon__title{text-align: left;}
 
 		.book-table{margin: 0;}
+
+		.form-book-table{
+			max-width: 100%;
+			margin: 0;
+			padding-top: 9px;
+		}
 	}
 
 	html[dir="rtl"]{
@@ -454,6 +460,7 @@ html[dir="rtl"]{
 				.icon{
 					margin-right: 0;
 					margin-left: 14px;
+					transform: rotate(180deg);
 				}
 			}
 		}
