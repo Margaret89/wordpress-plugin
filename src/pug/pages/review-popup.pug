@@ -8,10 +8,16 @@ block variables
 block modal
 	.popup-wrap(style="width: 800px;")
 		.popup
-			.popup__close
+			.popup__close.d-none.d-md-inline-block
 				+svg('ic-grad-close','ic-grad-close', '32', '32')
 
 			.popup__top
+				img.popup__bg-top.d-md-none(src='/assets/img/bg-mobile-head.svg', alt='')
+
+				.popup__back.d-md-none
+					+svg('ic-arrow-back','ic-arrow-back', '12', '20')
+					|Back
+					
 				.popup__head
 					.h2 What do you think about this place?
 

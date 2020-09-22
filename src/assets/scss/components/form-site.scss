@@ -639,5 +639,34 @@ html[dir="rtl"]{
 		&__count &__label{
 			@include font(normal, 500, 1rem, 1.2, #000);
 		}
+
+		&__attach-wrap{
+			display: block;
+
+			.file-upload{margin-bottom: 40px;}
+
+			.btn{
+				display: table;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.form-review{
+		margin: 0;
+
+		.form-site{
+			&__content{display: block;}
+
+			&__main,
+			&__range-wrap{
+				width: 100%;
+			}
+			
+			&__range-wrap{
+				padding: 0 5px;
+				margin: 40px 0 70px;
+			}
+		}
 	}
 }
