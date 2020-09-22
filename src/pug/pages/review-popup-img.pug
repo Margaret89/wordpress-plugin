@@ -8,10 +8,16 @@ block variables
 block modal
 	.popup-wrap(style="width: 800px;")
 		.popup
-			.popup__close
+			.popup__close.d-none.d-md-inline-block
 				+svg('ic-grad-close','ic-grad-close', '32', '32')
 
 			.popup__top
+				img.popup__bg-top.d-md-none(src='/assets/img/bg-mobile-head.svg', alt='')
+
+				.popup__back.d-md-none
+					+svg('ic-arrow-back','ic-arrow-back', '12', '20')
+					|Back
+
 				.popup__head
 					.h2 What do you think about this place?
 
@@ -30,15 +36,6 @@ block modal
 										.form-site__label Your review
 										.form-site__input
 											textarea(placeholder="Write your comment")
-
-									.upload-photo
-										.upload-photo__item(style="background-image: url(/assets/img/photo1.jpg)")
-											.upload-photo__close
-												+svg('ic-cancel','ic-cancel', '16', '16')
-
-										.upload-photo__item(style="background-image: url(/assets/img/photo2.jpg)")
-											.upload-photo__close
-												+svg('ic-cancel','ic-cancel', '16', '16')
 
 								.form-site__range-wrap
 									-
@@ -110,12 +107,22 @@ block modal
 									+range(info)
 
 							.form-site__attach-wrap
-								.file-upload
-									label.file-upload__content
-										input(type='file', name='file')
-										span.file-upload__btn
-											+svg('ic-photo','ic-photo', '24', '20')
-										span.file-upload__name Attach photo
+								.file-upload-wrap
+									.upload-photo
+										.upload-photo__item(style="background-image: url(/assets/img/photo1.jpg)")
+											.upload-photo__close
+												+svg('ic-cancel','ic-cancel', '16', '16')
+
+										.upload-photo__item(style="background-image: url(/assets/img/photo2.jpg)")
+											.upload-photo__close
+												+svg('ic-cancel','ic-cancel', '16', '16')
+												
+									.file-upload
+										label.file-upload__content
+											input(type='file', name='file')
+											span.file-upload__btn
+												+svg('ic-photo','ic-photo', '24', '20')
+											span.file-upload__name Attach photo
 
 								button.btn(type='submit')
 									span Send

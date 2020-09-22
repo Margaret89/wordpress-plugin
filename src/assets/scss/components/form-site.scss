@@ -202,7 +202,7 @@
 
 	&__attach-wrap{
 		display: flex;
-		align-items: center;
+		align-items: flex-end;
 		justify-content: space-between;
 		margin-top: 46px;
 	}
@@ -299,8 +299,7 @@
 	}
 
 	.upload-photo{
-		margin-top: 68px;
-		margin-bottom: -22px;
+		margin-bottom: 20px;
 	}
 }
 
