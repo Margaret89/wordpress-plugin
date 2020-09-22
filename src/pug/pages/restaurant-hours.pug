@@ -24,7 +24,13 @@ block content
 					img(src="/assets/img/gallery2.jpg", alt="")
 
 			.gallery__more
-				a.btn.btn_opacity All photos (12)
+				a.btn.btn_opacity
+					span.d-none.d-md-inline-flex All photos (12)
+					span.d-md-none
+						+svg('ic-photo','ic-photo', '16', '13')
+						span 12
+
+			//- .gallery__title.d-md-none Restaurant
 
 			.top-panel-wrap
 				.container
@@ -37,7 +43,7 @@ block content
 								a(href="#").top-panel-menu__item Deals & Coupons
 								a(href="#").top-panel-menu__item Restaurants
 
-						.top-panel__action
+						.top-panel__action.d-none.d-md-flex
 							.edit-address
 								.edit-address__val
 									+svg('ic-address','ic-address', '12', '16')
@@ -116,9 +122,12 @@ block content
 								.search__btn
 									+svg('ic-search','ic-search ic-stroke', '20', '20')
 
-							a(href="#").btn.btn_grad-green Sign in
+							.sign-in
+								a(href="#").btn.btn_grad-green
+									+svg('ic-enter','ic-enter', '20', '20')
+									span Sign in
 
-					ul.bredcrumb
+					ul.bredcrumb.d-none.d-md-flex
 						- var list=['Delivery', 'Food', 'Tel Aviv', 'Burgers', 'McDonalds']
 						each item in list
 							li.bredcrumb__item
@@ -130,11 +139,28 @@ block content
 				.detail-office__top
 					.detail-office__info
 						.detail-office__head
-							.detail-office__main
-								.detail-office__logo(style="background-image: url(/assets/img/mac.jpg)")
-								.detail-office__title McDonalds
+							.detail-office__logo(style="background-image: url(/assets/img/mac.jpg)")
+							.detail-office__main-wrap
+								.detail-office__main
+									.detail-office__title McDonalds
+									.detail-office__price $$60-120
 
-							.detail-office__price $$60-120
+								.detail-office__desc.d-lg-none Mediterranean, International, Vegan, Free gluten
+
+								.icon-group.d-lg-none
+									.icon-group__list
+										-
+											var list=[
+												{icon:'ic-accessibility-wc', status:'active'},
+												{icon:'ic-deaf', status:'active'},
+												{icon:'ic-accessibility', status:'active'},
+												{icon:'ic-park'}
+											]
+
+										each item in list
+											.icon-group__item(class=item.status=='active'?'active':'')
+												+svg(item.icon,item.icon, '25', '24')
+
 
 						.service-info
 							-
@@ -152,7 +178,7 @@ block content
 									span.service-info__text= item.title
 
 									if(item.title=='Working hours')
-										.service-popup.active
+										.service-popup
 											.service-popup__content
 												.service-time
 													-
@@ -162,7 +188,7 @@ block content
 															{title:'T'},
 															{title:'W'},
 															{title:'T'},
-															{title:'F', status:'active'},
+															{title:'F'},
 															{title:'S'},
 														]
 													each day, index in days
@@ -171,14 +197,43 @@ block content
 															.service-time__val 12:00 - 22:00
 																span= index
 
-						.detail-office__desc Mediterranean, International, Vegan, Free gluten
+						.detail-office__desc.d-none.d-lg-block Mediterranean, International, Vegan, Free gluten
+
+						.coins-panel.d-lg-none
+							.coins-panel__content
+								.coins-panel__icon
+									+svg('ic-euro','ic-euro', '40', '40')
+								.coins-panel__text Geteat coins for next order
+
+							.coins-panel__percent 15%
+
+						.working-time.d-lg-none
+							img.working-time__bg(src="/assets/img/wt-wave-white.png", alt="")
+
+							.working-time__img
+								img(src="/assets/img/tablet_open.svg", alt="")
+
+							.countdown
+								.countdown__label Opens in
+								.countdown__content
+									.countdown__sect
+										.countdown__item 0
+										.countdown__item 0
+
+									.countdown__sect
+										.countdown__item 2
+										.countdown__item 3
+
+									.countdown__sect
+										.countdown__item 0
+										.countdown__item 3
 
 						.rating-card
 							.rating-card__top
 								.rating-card__top-content
 									.rating-card__head-wrap
 										.rating-card__title Rating
-										.rating-card__desc Based on 485 reviews from last 12 months
+										.rating-card__desc.d-none.d-md-block Based on 485 reviews from last 12 months
 
 									.mark.mark_orange
 										.mark__text 3,7
@@ -202,7 +257,7 @@ block content
 
 					.detail-office__location
 						.detail-office__icons
-							.icon-group
+							.icon-group.d-none.d-lg-block
 								.icon-group__list
 									-
 										var list=[
@@ -216,7 +271,7 @@ block content
 										.icon-group__item(class=item.status=='active'?'active':'')
 											+svg(item.icon,item.icon, '25', '24')
 
-							.coins-panel
+							.coins-panel.d-none.d-lg-block
 								.coins-panel__content
 									.coins-panel__icon
 										+svg('ic-euro','ic-euro', '40', '40')
@@ -260,6 +315,10 @@ block content
 
 								.contact-card__map(style="background-image: url(/assets/img/map.jpg)")
 
+								.contact-card__btn.d-md-none
+									a(href="#").btn.btn_border-grad
+										span.btn__grad-content Navigate
+
 				.detail-office__bottom
 					.advant
 						img(src="/assets/img/advant-wave.png", alt="").advant__bg
@@ -282,7 +341,10 @@ block content
 								if(item.text)
 									.advant__text= item.text
 
-					.working-time.working-time_red
+					.working-time.working-time_red.d-none.d-lg-block
+						
+						img.working-time__bg(src="/assets/img/wt-wave-white.png", alt="")
+
 						.working-time__img
 							img(src="/assets/img/tablet_close.svg", alt="")
 
@@ -314,26 +376,44 @@ block content
 							{img:'woman.jpg', name:'Alise Clarck', title:'Fantastic burgers', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu turpis tristique dapibus justo lectus sed. Urna ipsum felis sed cras ornare morbi metus. Et, sed sed mi, ullamcorper eu. In cras quis senectus nunc. Vel cras massa sodales tortor urna eleifend ut egestas. Ultricies id laoreet volutpat egestas nunc dictumst in.', date:'10/11/2019 at 19:32', like:'ic-like', rating:'4,7', rating_img:'5'},
 							{img:'man.jpg', name:'Adam Smith', title:'Fantastic burgers', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu turpis tristique dapibus justo lectus sed. Urna ipsum felis sed cras ornare morbi metus. Et, sed sed mi, ullamcorper eu. In cras quis senectus nunc. Vel cras massa sodales tortor urna eleifend ut egestas. Ultricies id laoreet volutpat egestas nunc dictumst in.', date:'10/11/2019 at 19:32', like:'ic-like-fill', rating:'2,8', rating_color:'red', rating_img:'3'},
 							{img:'woman.jpg', name:'Alise Clarck', title:'Fantastic burgers', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu turpis tristique dapibus justo lectus sed. Urna ipsum felis sed cras ornare morbi metus. Et, sed sed mi, ullamcorper eu. In cras quis senectus nunc. Vel cras massa sodales tortor urna eleifend ut egestas. Ultricies id laoreet volutpat egestas nunc dictumst in.', date:'10/11/2019 at 19:32', like:'ic-like-fill', rating:'4,7', rating_img:'5'},
-							{img:'man.jpg', name:'Adam Smith', title:'Fantastic burgers', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit tortor, pharetra eu proin nisi, ligula nisl, cursus sit. Nunc eu volutpat amet, tortor. Amet, integer sollicitudin purus amet adipiscing. Et lectus gravida donec sodales vulputate egestas morbi. Placerat etiam viverra semper sit posuere faucibus. Nam in at aliquam interdum enim gravida fringilla. Elementum massa nascetur nam nec eu. Nunc blandit morbi diam non. Lobortis phasellus ultrices condimentum feugiat vitae a risus facilisis ipsum', date:'10/11/2019 at 19:32', like:'ic-like', rating:'2,8', rating_color:'red', rating_progress:'true'}
+							{img:'man.jpg', name:'Adam Smith', title:'Fantastic burgers', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit tortor, pharetra eu proin nisi, ligula nisl, cursus sit. Nunc eu volutpat amet, tortor. Amet, integer sollicitudin purus amet adipiscing. Et lectus gravida donec sodales vulputate egestas morbi. Placerat etiam viverra semper sit posuere faucibus. Nam in at aliquam interdum enim gravida fringilla. Elementum massa nascetur nam nec eu. Nunc blandit morbi diam non. Lobortis phasellus ultrices condimentum feugiat vitae a risus facilisis ipsum', date:'10/11/2019 at 19:32', like:'ic-like', rating:'2,8', rating_color:'red', rating_progress:'true', mobile:'none'}
 						]
 
 					each item in list
-						.review-item
+						.review-item(class=item.mobile=='none'?'d-none d-lg-flex':'')
 							.review-item__main
 								.review-item__author
 									.review-item__img(style="background-image: url(/assets/img/"+item.img+")")
-									.review-item__name= item.name
+									.review-item__head-wrap
+										.review-item__head
+											.review-item__name= item.name
+											.review-item__title.d-md-none= item.title
+
+										.mark.d-md-none(class=item.rating_color=='red'?'mark_red':'')
+											.mark__text= item.rating
 
 								.review-item__content
 									.review-item__info
-										.review-item__title= item.title
+										.review-item__title.d-none.d-md-block= item.title
 										.review-item__text= item.text
+
+									.review-gallery.d-md-none
+										-
+											var gallery=[
+												{img:'review1.jpg'},
+												{img:'review2.jpg'},
+												{img:'review1.jpg', count:'+2'},
+											]
+										each gal, index in gallery
+											.review-gallery__item(style="background-image: url(/assets/img/"+gal.img+")")
+												if(index == '2')
+													.review-gallery__count= gal.count
 
 									.review-item__bottom
 										.review-item__date= item.date
 										+svg(item.like,item.like, '20', '20')
 
-							.review-rating
+							.review-rating.d-none.d-md-block
 								if(item.rating_img)
 									.review-rating__top
 										.review-rating__title Rating
@@ -389,11 +469,11 @@ block footer
 	footer.footer
 		.container
 			.footer__content
-				.footer-logo
+				.footer-logo.d-none.d-md-flex
 					.footer-logo__img(style="background-image: url(/assets/img/mac.jpg)")
 					.footer-logo__name McDonalds
 
-				.countdown
+				.countdown.d-none.d-md-block
 					.countdown__label Opens in
 					.countdown__content
 						.countdown__sect
