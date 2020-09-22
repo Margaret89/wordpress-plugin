@@ -8,6 +8,8 @@ block content
 	section
 		.container
 			.vacancy
+				.vacancy__text.d-md-none
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 				-
 					var list=[
 						{title:'Cashier', img:'cv1.jpg'},
@@ -31,17 +33,21 @@ block content
 									span.vacancy__link-text Send cv
 									+svg('ic-arrow-right','ic-arrow-right ic-white', '14', '11')
 
-								.social-circle
-									a(href="#").social-circle__item.social-circle__item_fb
-										+svg('ic-facebook','ic-facebook', '16', '16')
+								.social-share
+									.social-share__btn
+										+svg('ic-share','ic-share', '16', '16')
 
-									a(href="#").social-circle__item.social-circle__item_tg
-										+svg('ic-telegram','ic-telegram', '16', '16')
+									.social-circle
+										a(href="#").social-circle__item.social-circle__item_fb
+											+svg('ic-facebook','ic-facebook', '16', '16')
 
-									a(href="#").social-circle__item.social-circle__item_wh
-										+svg('ic-whatsapp','ic-whatsapp', '16', '16')
+										a(href="#").social-circle__item.social-circle__item_tg
+											+svg('ic-telegram','ic-telegram', '16', '16')
 
-									a(href="#").social-circle__item
-										+svg('ic-gmail','ic-gmail', '16', '16')
+										a(href="#").social-circle__item.social-circle__item_wh
+											+svg('ic-whatsapp','ic-whatsapp', '16', '16')
+
+										a(href="#").social-circle__item
+											+svg('ic-gmail','ic-gmail', '16', '16')
 						
 						.vacancy__img(style="background-image: url(/assets/img/"+item.img+")")
