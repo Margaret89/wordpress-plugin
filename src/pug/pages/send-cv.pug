@@ -9,10 +9,16 @@ block variables
 block modal
 	.popup-wrap
 		.popup
-			.popup__close
+			.popup__close.d-none.d-md-inline-block
 				+svg('ic-grad-close','ic-grad-close', '32', '32')
 
 			.popup__top
+				img.popup__bg-top.d-md-none(src='/assets/img/bg-mobile-head.svg', alt='')
+
+				.popup__back.d-md-none
+					+svg('ic-arrow-back','ic-arrow-back', '12', '20')
+					|Back
+
 				.popup__head
 					.h2 Send CV
 			.popup__content
@@ -48,9 +54,10 @@ block modal
 										+svg('ic-attach','ic-attach', '24', '24')
 									span.file-upload__name Attach file
 
-								span.file-upload__res CV.doc
-										span.file-upload__res-del
-											+svg('ic-minus','ic-minus', '10', '2')
+								.file-upload__res-list
+									span.file-upload__res CV.doc
+											span.file-upload__res-del
+												+svg('ic-minus','ic-minus', '10', '2')
 
 					.form-site__btn
 						button.btn(type='submit')

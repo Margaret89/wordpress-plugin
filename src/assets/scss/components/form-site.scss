@@ -518,6 +518,11 @@
 		margin-left: 16px;
 	}
 
+	&__res-list{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
 	&__res{
 		display: inline-block;
 		height: 2rem;
@@ -687,6 +692,11 @@ html[dir="rtl"]{
 		margin: 0;
 	}
 
+	.file-upload{
+		display: flex;
+		justify-content: space-between;
+	}
+
 	.form-page{
 		padding-bottom: 30px;
 		padding-top: 30px;
@@ -728,5 +738,9 @@ html[dir="rtl"]{
 			@include gradient-orange;
 			color: #fff;
 		}
+	}
+
+	.form-site-msg{
+		textarea{height: 120px;}
 	}
 }
