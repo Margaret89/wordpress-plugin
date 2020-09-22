@@ -15,8 +15,8 @@ block modal
 				img.popup__bg-top.d-md-none(src='/assets/img/bg-mobile-head.svg', alt='')
 
 				.popup__back.d-md-none
-					+svg('ic-arrow-left','ic-arrow-left', '16', '12')
-					|back
+					+svg('ic-arrow-back','ic-arrow-back', '12', '20')
+					|Back
 
 				.popup__head
 					.h2 Book a table
@@ -39,11 +39,15 @@ block modal
 										+svg('ic-plus','ic-plus', '18', '18')
 							
 							.book-table__time
-								.input-date
-									input(type='date', value='2020-04-10')
+								.book-table__time-item
+									.book-table__time-label.d-md-none Date
+									.input-date
+										input(type='date', value='2020-04-10')
 									
-								.input-time
-									input(type='time', value='17:00')
+								.book-table__time-item
+									.book-table__time-label.d-md-none Time
+									.input-time
+										input(type='time', value='17:00')
 
 						.book-table__list
 							-

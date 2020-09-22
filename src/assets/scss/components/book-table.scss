@@ -107,6 +107,12 @@
 		background-size: contain;
 	}
 
+	&__time-label{
+		@include font(normal, 500, 0.75rem, 1.2, #9b9b9b);
+		text-transform: uppercase;
+		margin-bottom: 8px;
+	}
+
 	&__list{
 		display: flex;
 		justify-content: space-between;
@@ -397,4 +403,40 @@ html[dir="rtl"]{
 			}
 		}
 	}
+}
+
+@media (max-width: 767px) {
+	.book-table{
+		&__top{
+			display: block;
+			margin-bottom: 24px;
+			padding-bottom: 9px;
+		}
+
+		&__time-item{width: calc(50% - 16px);}
+
+		&__count,
+		&__time{
+			width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		.input-date,
+		.input-time{
+			width: 100%;
+		}
+
+		&__count{margin-bottom: 24px;}
+
+		&__content{padding-top: 14px;}
+	}
+
+	.book-table-card{
+		width: 100%;
+		padding: 20px 20px 16px;
+		margin: 0 0 12px;
+	}
+
+	.book-table-res{margin-top: 20px;}
 }
