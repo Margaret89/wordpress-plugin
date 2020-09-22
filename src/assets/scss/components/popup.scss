@@ -471,9 +471,11 @@ html[dir="rtl"]{
 			}
 
 			&__close{
-				right: 0;
+				right: auto;
 				left: 20px;
 			}
+
+			&__bg-top{transform: scale(-1 , 1);}
 		}
 	}
 }
