@@ -439,4 +439,11 @@ html[dir="rtl"]{
 	}
 
 	.book-table-res{margin-top: 20px;}
+
+	.book-success{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+	}
 }

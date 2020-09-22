@@ -333,8 +333,8 @@ html[dir="rtl"]{
 		// &__text{max-width: 100%;}
 
 		&__top{
-			min-height: 240px;
-			padding: 47px 20px 30px;
+			height: 240px;
+			padding: 47px 20px 60px;
 			position: relative;
 		}
 
@@ -347,6 +347,12 @@ html[dir="rtl"]{
 			position: absolute;
 			top: 0;
 			left: 0;
+		}
+		
+		&__close{
+			top: 10px;
+			right: 20px;
+			z-index: 2;
 		}
 
 		&__head a{color: #fff;}
@@ -367,11 +373,11 @@ html[dir="rtl"]{
 			font-size: 2.5rem;
 		}
 
-		// &__text{
-		// 	color: #fff;
-		// 	margin: 0;
-		// 	text-align: left;
-		// }
+		&__text{
+			@include font(normal, 500, 1.25rem, 1.2, #fff);
+			margin-top: 16px;
+			position: relative;
+		}
 
 		&__content{
 			height: calc(100% - 240px);
@@ -462,6 +468,11 @@ html[dir="rtl"]{
 					margin-left: 14px;
 					transform: rotate(180deg);
 				}
+			}
+
+			&__close{
+				right: 0;
+				left: 20px;
 			}
 		}
 	}

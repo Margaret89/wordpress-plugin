@@ -9,14 +9,24 @@ block modal
 	.popup-wrap
 		.popup
 			.popup__close
-				+svg('ic-grad-close','ic-grad-close', '32', '32')
+				.d-none.d-md-inline-block
+					+svg('ic-grad-close','ic-grad-close', '32', '32')
+				.d-md-none
+					+svg('ic-close-circle','ic-close-circle ic-white', '32', '32')
 
 			.popup__top
+				img.popup__bg-top.d-md-none(src='/assets/img/bg-mobile-head.svg', alt='')
+				
 				.popup__head
 					.h2 We are waiting for you
+
+				.popup__text.d-md-none Friday, 10/04/2020
+					br
+					|19:00 | 2 diners
+
 			.popup__content
 				.book-success
-					.book-success__text Friday, 10/04/2020
+					.book-success__text.d-none.d-md-block Friday, 10/04/2020
 						br
 						|19:00 | 2 diners
 
